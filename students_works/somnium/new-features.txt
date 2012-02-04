@@ -1,0 +1,13 @@
+Animation over interactible objects	DONE
+Instructions Screen			DONE
+New Sounds
+	Popup - Opening Book/Newspaper	DONE
+	Sink - Run Water		DONE
+	Fire - Put Out			DONE
+	Fire - Proximity		LATERZ
+	Oven - Opening			DONE
+	Item - Acquiring		LATERZ
+	New Ambient Music		DONE
+	Pig - Death			DONE
+Difficulty Levels			FUCK IT
+New Death Animation			DONE
