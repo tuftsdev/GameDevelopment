@@ -60,17 +60,17 @@ if __name__ == "__main__":
 		print "Warning, sound disabled"
 		
 	# Constants
-	FPS = 50
+	FPS = 60
 	SCREEN_WIDTH, SCREEN_HEIGHT = 800, 600
 	MAX_SPEED = 10
 	BACKGROUND_COLOR = (255, 255, 255)
 	SPRITE_IMAGES = ['bluecreep.png', 'pinkcreep.png', 'graycreep.png']
-	NUM_SPRITES = 25
+	NUM_SPRITES = 100
 	COUNTER_LOCATION = (10, 10)
 	
 	# Initialize Pygame, the clock (for FPS), and a simple counter
 	pygame.init()
-	screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), 0, 32)
+	screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.FULLSCREEN, 32)
 	pygame.display.set_caption('Simple Sprite Demo')
 	clock = pygame.time.Clock()
 	font = pygame.font.Font(None, 28)
