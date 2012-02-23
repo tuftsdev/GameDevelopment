@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<Skein rootNode="node-0x5c5f190" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Zoom</generator>
+  <activeNode nodeId="node-0x5c5abb0" />
+  <item nodeId="node-0x5c5f190">
+    <command xml:space="preserve">- start -</command>
+    <result xml:space="preserve">
+
+
+
+TheWhiteRoom
+An Interactive Fiction by Ming Chow
+Release 1 / Serial number 120222 / Inform 7 build 6G60 (I6/v6.32 lib 6/12N) SD
+
+White Room
+In the white room with black curtains near the station. Black-roof country, no gold pavements, tired starlings. Silver horses run down moonbeams in your dark eyes. East is The Garden of Eden
+
+&gt;</result>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="14">NO</temporary>
+    <children>
+      <child nodeId="node-0x5c5f1e0" />
+      <child nodeId="node-0x5c2f340" />
+    </children>
+  </item>
+  <item nodeId="node-0x5c2f340">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">You can&apos;t go that way.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="14">YES</temporary>
+    <children>
+      <child nodeId="node-0x5a28b0" />
+    </children>
+  </item>
+  <item nodeId="node-0x5a28b0">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">You can&apos;t go that way.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="14">YES</temporary>
+    <children>
+      <child nodeId="node-0x5c3f920" />
+    </children>
+  </item>
+  <item nodeId="node-0x5c3f920">
+    <command xml:space="preserve">go east</command>
+    <result xml:space="preserve">
+Garden of Eden
+You are now in The Garden of Eden.
+
+You can see a pamplet here.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="14">YES</temporary>
+    <children>
+      <child nodeId="node-0x5c817c0" />
+    </children>
+  </item>
+  <item nodeId="node-0x5c817c0">
+    <command xml:space="preserve">take it</command>
+    <result xml:space="preserve">Taken.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="14">YES</temporary>
+    <children>
+      <child nodeId="node-0x5c61290" />
+    </children>
+  </item>
+  <item nodeId="node-0x5c61290">
+    <command xml:space="preserve">take pamphlet</command>
+    <result xml:space="preserve">You can&apos;t see any such thing.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="14">YES</temporary>
+    <children>
+      <child nodeId="node-0x5c45360" />
+    </children>
+  </item>
+  <item nodeId="node-0x5c45360">
+    <command xml:space="preserve">burn it</command>
+    <result xml:space="preserve">This dangerous act would achieve little.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="14">YES</temporary>
+    <children>
+      <child nodeId="node-0xc136370" />
+    </children>
+  </item>
+  <item nodeId="node-0xc136370">
+    <command xml:space="preserve">eat it</command>
+    <result xml:space="preserve">That&apos;s plainly inedible.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="14">YES</temporary>
+    <children>
+      <child nodeId="node-0x8028920" />
+    </children>
+  </item>
+  <item nodeId="node-0x8028920">
+    <command xml:space="preserve">feel it</command>
+    <result xml:space="preserve">You feel nothing unexpected.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="14">YES</temporary>
+    <children>
+      <child nodeId="node-0x517020" />
+    </children>
+  </item>
+  <item nodeId="node-0x517020">
+    <command xml:space="preserve">look under it</command>
+    <result xml:space="preserve">You find nothing of interest.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="14">YES</temporary>
+    <children>
+      <child nodeId="node-0x5f6fe0" />
+    </children>
+  </item>
+  <item nodeId="node-0x5f6fe0">
+    <command xml:space="preserve">build a tent</command>
+    <result xml:space="preserve">That&apos;s not a verb I recognise.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="14">YES</temporary>
+    <children>
+      <child nodeId="node-0xc14be50" />
+    </children>
+  </item>
+  <item nodeId="node-0xc14be50">
+    <command xml:space="preserve">read it</command>
+    <result xml:space="preserve">In a gadda-da-vida, baby You know that I&apos;m loving you In a gadda-da-vida, honey You know I&apos;ll always be true
+
+Oh, won&apos;t you come with me And take my hand Oh, won&apos;t you come with me And walk this land Please take my hand
+
+In a gadda da vida, honey Don&apos;t you know that I&apos;m lovin&quot; you In a gadda da vida, baby Don&apos;t you know that I&apos;ll always be true 
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="14">YES</temporary>
+    <children>
+      <child nodeId="node-0x5c5abb0" />
+    </children>
+  </item>
+  <item nodeId="node-0x5c5abb0">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">
+White Room
+In the white room with black curtains near the station. Black-roof country, no gold pavements, tired starlings. Silver horses run down moonbeams in your dark eyes. East is The Garden of Eden
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="13">YES</temporary>
+  </item>
+  <item nodeId="node-0x5c5f1e0">
+    <command xml:space="preserve">go east</command>
+    <result xml:space="preserve">You can&apos;t go that way.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="1">YES</temporary>
+    <children>
+      <child nodeId="node-0x5c82b90" />
+    </children>
+  </item>
+  <item nodeId="node-0x5c82b90">
+    <command xml:space="preserve">pick up pamplet</command>
+    <result xml:space="preserve">Taken.
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="8">YES</temporary>
+    <children>
+      <child nodeId="node-0x5c82be0" />
+    </children>
+  </item>
+  <item nodeId="node-0x5c82be0">
+    <command xml:space="preserve">read pamplet</command>
+    <result xml:space="preserve">In a gadda da vida, baby (In the Garden of Eden) In a gadda da vida, honey Don&apos;t you know that I&apos;m lovin&quot; you
+
+Oh, won&apos;t you come with me And take my hand Oh, won&apos;t you come with me And walk this land Please take my hand
+
+In a gadda da vida, honey Don&apos;t you know that I&apos;m lovin&quot; you In a gadda da vida, baby Don&apos;t you know that I&apos;ll always be true 
+
+&gt;</result>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="7">YES</temporary>
+  </item>
+</Skein>
