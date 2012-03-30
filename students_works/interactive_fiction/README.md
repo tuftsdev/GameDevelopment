@@ -2,4 +2,5 @@
 
 The original assignment specification is at http://www.cs.tufts.edu/comp/50GD/assignments/a03.php
 
-*"The Cult of Prophets" by AJ Jenkins  - http://www.eecs.tufts.edu/~ajenki01/cop_game/cop.html
+* "Clue" by Max Goldstein - http://www.eecs.tufts.edu/~mgolds07/clue/
+* "The Cult of Prophets" by AJ Jenkins - http://www.eecs.tufts.edu/~ajenki01/cop_game/cop.html
