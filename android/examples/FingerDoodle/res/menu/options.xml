@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:title="@string/newd" android:id="@+id/newd"></item>
+	<item android:title="@string/uStroke" android:id="@+id/uStroke"></item>
+	<item android:title="@string/uPaint" android:id="@+id/uPaint"></item>
+	<item android:title="@string/uBackground" android:id="@+id/uBackground"></item>
+	<item android:title="@string/about" android:id="@+id/about"></item>
+</menu>

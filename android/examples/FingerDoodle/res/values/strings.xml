@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Finger Doodle</string>
+	<string name="newd">New Doodle</string>
+	<string name="newdToast">Starting new doodle...</string>
+	<string name="save">Save Doodle</string>
+	<string name="saveSuccessToast">Successfully saved doodle!</string>
+	<string name="saveFailToast">Uh oh, could not save doodle!</string>	
+	<string name="uStroke">Change Stroke</string>	
+	<string name="uBackground">Change Background</string>
+	<string name="uPaint">Change Paint</string>
+	<string name="publish">Publish to Web</string>
+	<string name="about">About</string>
+	<string name="about_text">Finger Doodle\n\nVersion 1.0\n\nWritten by Ming Chow\n\nIcon of @nrnrnr by Tim Roberts\n\nLast updated on August 18, 2010</string>
+	<string name="dialog_color_picker">Pick a Color</string>
+	<string name="dialog_change_stroke_width">Change Stroke Width</string>
+</resources>
