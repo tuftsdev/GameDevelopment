@@ -1,0 +1,32 @@
+body {
+	font-family: "Lucida Grande", Tahoma, sans-serif;
+	text-align: center;
+}
+
+img {
+	border: 0;
+}
+
+#content, #nav, #footer {
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#showcase {
+	border-color: black;
+	border-width: 1px;
+	border-style: solid;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#showcase tr th, td {
+	border-right-color: black;
+	border-bottom-color: black;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	text-align: left;
+}
