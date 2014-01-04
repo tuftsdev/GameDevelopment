@@ -1,0 +1,76 @@
+@font-face {
+    font-family: PressStart2P-Regular;
+    src: url('../fonts/PressStart2P-Regular.ttf');
+}
+
+body {
+	background-color: white;
+	font-family: 'PressStart2P-Regular', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: black;
+}
+
+#main {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+a:link {
+	color:#0000FF;
+}
+
+a:visited {
+	color:#FF0000;
+}
+
+a:hover {
+	color:#00FF00;
+}
+
+a:active {
+	color:#0000FF;
+}
+
+.yay {
+	color: green;
+}
+
+.note {
+	color: red;
+}
+
+.directions {
+	font-weight: bold;
+}
+
+
+.title {
+	font-style: italic;
+	font-weight: bold;
+}
+
+code {
+	font-weight: bold;
+}
+
+.stress {
+	font-style: italic;
+}
+
+.def {
+	font-style: italic;
+	font-weight: bold;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #000000;
+}
+
+tr th, td {
+	width: 33%;
+	text-align: left;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+}
