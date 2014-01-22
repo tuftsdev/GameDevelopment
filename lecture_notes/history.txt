@@ -1,0 +1,145 @@
+* No good Game Dev course can be without a history lesson
+* Shed insight on the progress and significant contributions to
+video/computer games...
+* ...and perhaps will enlighten you
+* ...so sit back and enjoy the ride!
+
+The First Computer/Video Game
+=============================
+1952 - A.S. Douglas of U. Cambridge developed Tic-Tac-Toe for the
+Electronic Delay Storage Automatic Calculator (EDSAC), a British
+computer.
+
+The 60s
+=======
+The first games were hacked on oscilloscopes and university mainframes.
+1962 - Spacewar. Developed at MIT on a PDP-1 (Programmed Data
+Processor-1; Digital Equipment); used vector graphics.
+1965 - Periscope. Developed by Sega; popularity prompted Sega to ditch
+the pinball business and produce more of its own games. See
+http://www.pinrepair.com/arcade/sperisc.htm
+
+The 70s
+=======
+1971 - Computer Space (a Spacewar clone). Developed by Nolan Bushnell
+and Ted Dabney; used a regular raster display television set; too ahead
+of its time.
+1972 - Magnavox Odyssey. The first home video game console developed by
+Ralph Baer. A commercial success ($100 a system, 330,000 sold).
+1972 - Nolan Bushnell and Ted Dabney found Atari.
+1972 - Pong, the arcade machine (by Atari). Home version released in
+1975.
+1974 - Tank. Developed by Kee Games. The first arcade game to use ROM
+chips.
+1976 - (Colossal Cave) Adventure. The first text-based interactive
+fiction game developed by William Crowther and Don Woods on Digital
+mainframes.
+1976 - Breakout. Prototyped by then Atari employee Steve Jobs (with the
+help of friend Steve Wozniak). Jobs "hosed" Wozniak on bonus money from
+Atari. Good read:
+http://classicgaming.gamespy.com/View.php?view=Articles.Detail&id=395
+1977 - Atari 2600 (128 bytes of RAM); Apple introduces the Apple II. 2
+million Atari 2600s sold by 1980 --thanks in part to the next game...
+1978 - ...Space Invaders. Developed by Taito in Japan.
+1979 - Asteroids. Developed by Atari.
+
+The 80s
+=======
+1980 - Pac-Man. Developed by Namco. Made over $1 billion since its
+release.
+1980 - Battlezone. Developed by Atari (who was doing $1 billion in
+business).
+1981 - Many games released: Donkey Kong, Centipede, Ms. Pac-Man,
+Galaxian, Tempest.
+1982 - Electronic Arts (EA) is founded.
+1984 - Apple introduces the Macintosh (birth of the modern computer).
+The best-of-times and the worst-of-times: the game industry > $6 billion
+in 1981, then Atari sales down 50% in 1981, the game industry < $800
+million by 1984.
+1985 - Nintendo Entertainment System (NES)
+1985 - Tetris. Developed in the Soviet Union.
+1986 - Sega Master System, Amiga by Commodore (computer), and Atari
+7800.
+1989 - Three major products: Sega Genesis (16-bit console), Nintendo
+GameBoy, SimCity (developed by Maxis).
+What Sega did right for Genesis: EA sports titles.
+
+The 90s: The Start of the Console Wars
+======================================
+1990 - Super Mario Brothers 3 (NES)
+1991 - Super Nintendo (SNES) released. The 16-bit competitor to the Sega
+Genesis.
+1991 - S3 introduces first single chip graphics accelerator for PC.
+1991 - Two major games: Street Fighter II (Capcom) and Wolfenstein 3D
+(id Software)
+1992 - Goro lives... Mortal Kombat. Developed by Dan Forden, Ed Boon,
+and John Tobias at Midway Games.
+Nintendo has $7 billion in sales worldwide; Sega and Nintendo consoles
+dominate 80% of the computer/video game market.
+1993 - Two major games: DOOM (id Software; 2.5D, not true 3D) and Myst
+(Broderbund).
+1993 - 7th Guest. First game with full-motion video.
+1995 - Windows 95. Make game development significantly easier (DirectX
+SDK, plug-and-play).
+1995 - Two 32-bit systems released: Sega Saturn and Sony PlayStation.
+1996 - Nintendo 64. Cartridge based system aimed for the younger market.
+1996 - Quake (id Software). Real 3D engine; multiplayer online game
+1997 - Standardization of 3D acceleration; Pentium II 200 MHz PCs.
+1997 - Ultima Online. The first 3D Massive Multiplayer Online Role
+Playing Game (MMORPG).
+1997 - GoldenEye 007 was released for N64. Apparently, the game was
+developed by a team of developers who had never developed a game before.
+The renown multiplayer mode was an afterthought!
+1997 - Final Fantasy VII was released for PS1.
+1998 - The Legend of Zelda: Ocarina of Time was released for N64.
+1999 - Sega Dreamcast released. 128-bit console.
+
+The New Millennium
+==================
+2000 - The Sims, developed by Maxis and published by EA. The
+best-selling PC game of all time (over 16 million copies)
+October 26, 2000 - Sony PlayStation 2 released. 128-bit console; 294 MHz
+processor ("Emotion Engine"), made software development difficult.
+November 2001 - Microsoft XBox released. 128-bit console; Pentium 4 733
+MHz processor; DirectX API; hardware is the strength of the system.
+Launch title: Halo
+November 2001 - Nintendo GameCube released. 128-bit console; IBM Gekko
+Processor at 403 MHz; easier software development; cheapest of the three
+systems. Over 20 million units sold worldwide as of 2008.
+2001 - Grand Theft Auto III. Developed by Rockstar Games.
+2004 - Two handheld systems released: Nintendo DS, Sony PlayStation
+Portable (PSP)
+November 2004 - World of Warcraft released; over 9 million players /
+subscriptions worldwide as of 2008
+November 2005 - Microsoft XBox 360 released. Custom IBM PowerPC and ATI
+Graphics processors. Very powerful hardware.
+Problems with overheating
+"Red Ring of Death" (hardware failure of some sort)
+November 2005 - Guitar Hero I released
+November 7, 2006 - Guitar Hero II released
+November 17, 2006 - PlayStation 3 (PS3) released. Chaos ensue in lines
+at Best Buy stores across America and on eBay.
+Supports Blu-ray. An optical disc can hold up to 25 GB or data.
+Expensive to produce initially
+40 GB or 80 GB hard drive options
+November 19, 2006 - Nintendo Wii released. You no longer need good luck
+finding one, unlike the past two years!
+Originally code-named "Revolution"
+Can play NES / SNES / Nintendo 64 / Sega Genesis / TurboGrafx-16 / Neo
+Geo games via emulation and download services
+No high definition support
+April 2007 - Nintendo profits up 77% (thanks WSJ); Wii outsells the PS3
+4:1; XBox 360 outsells PS3 2:1
+June 2007 - Apple releases the iPhone
+July 2007 - Zynga founded
+September 2007 - Halo 3 released. Sold over 8 million copies sold
+worldwide.
+November 2007 - Rock Band released for PS3 and XBox 360 by Harmonix
+Music Systems (based in Cambridge, MA)
+January 2009 - Apparently, Wii Sports becomes the best-selling game of
+all time (that was quick)
+November 15, 2009 - 2D lives! New Super Mario Bros. Wii
+December 2009 - Rovio Mobile publishes first Angry Birds
+April 3, 2010 - Apple iPad
+June 24, 2010 - iPhone 4
+November 2010 - Microsoft Kinect
