@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<link rel="stylesheet" href="../stylesheets/default.css" type="text/css" media="screen" />
+<title>COMP 23: Introduction to Game Development - Game Design Principles</title>
+</head>
+
+<body>
+<div id="main">
+
+<div id = "header">
+<h1>Introduction to Game Development</h1>
+<h2>Game Design Principles</h2>
+</div>
+
+<h3>Motivation: Why Do We Love Pong?</h3>
+<ul>
+<li>Simple</li>
+<li>Every game is unique</li>
+<li>Elegant representation (of table tennis in real life)</li>
+<li>Social: it takes two to play</li>
+<li>Fun</li>
+<li>Cool</li>
+</ul>
+
+<h3>What is a Game?</h3>
+<ul>
+<li>What are the differences between a movie and a game?
+<ul>
+<li>A movie does not require any input from a user; a game does</li>
+<li>A movie has a predetermined ending; a game sometimes have no ending, sometimes have one ending, sometimes you can have multiple ways to die</li>
+<li>You have to make (interesting) decisions.  There are consequences for all decisions</li>
+</ul>
+</li>
+<li>What are the differences between a toy and a game?
+<ul>
+<li>Every game is unique; you face different choices in each game</li>
+<li>A game has rules and clearly-defined goals</li>
+<li>There may be constraints in a game</li>
+</ul>
+</li>
+<li>A game has a universe
+<ul>
+<li>Players</li>
+<li>Objects (e.g., vehicles)</li>
+<li>Terrains</li>
+<li>Behaviors: e.g., physics, sound, speech, emotions</li>
+</ul>
+</li>
+<li>Pretending - the mental ability to establish a notion of reality</li>
+</ul>
+
+<h3>What is a Digital Game?</h3>
+<ul>
+<li>Immediate interactivity</li>
+<li>Visible and measurable feedback</li>
+<li>Narrow input and output</li>
+<li>Information manipulation</li>
+<li>Automation of complex systems (e.g., graphics, AI)</li>
+<li>Network communications</li>
+<li>Integration of all the traits above</li>
+</ul>
+
+<h3>What is Fun?</h3>
+<ul>
+<li>Games tap into human motivation systems</li>
+<li>Fun = self determination theory</li>
+</ul>
+
+<h3>Game Design Principles</h3>
+<ul>
+<li>"Why should someone else play it?"</li>
+<li>Identify the players and the audience</li>
+<li>Identify the genre, which may automatically put in place constraints</li>
+<li>Identify the universe and landscape</li>
+<li>Identify the constraints and goals
+<ul>
+<li>Determine the criteria for success.  How do you win?  How do you lose?</li>
+</ul>
+</li>
+<li>Determine the rules of interaction
+<ul>
+<li>Controls; interaction with character, put the player in some environment</li>
+<li>How do you explain constraints to the player?  Do you tell a story?</li>
+</ul>
+</li>
+<li>Operational issues (e.g., delivery)</li>
+</ul>
+
+<h3>Rules</h3>
+<ul>
+<li>Semiotics - symbols; sometimes abstract and sometimes have parallels in the real world</li>
+<li>Gameplay - the challenges that a player must face to arrive at the objective of the game; the actions that the player is permitted to take to address those challenges</li>
+<li>Sequence of play - progression of activities</li>
+<li>Goal(s) of the game - the objective of the game</li>
+<li>Termination condition - a.k.a, victory conditions, a.k.a., end-game</li>
+<li>Metarules - rules about the rules</li>
+</ul>
+
+<h3>Common Goals in Games</h3>
+<ul>
+<li>Beat the final boss</li>
+<li>Save the princess</li>
+<li>Capture the king, the country, flag, etc.</li>
+<li>Save the world</li>
+<li>Beat your opponent, the other guy</li>
+<li>Get the highest score</li>
+<li>Complete all the levels</li>
+<li>Build the best {fill in the blanks} without going bankrupt</li>
+<li>Sandboxing; play God (a.k.a., "wuss" mode)</li>
+<li>Achieve something (e.g., reunite the Triforce)</li>
+<li>Grab a lot of grub</li>
+<li>Get the most kills</li>
+<li>Kill everything that moves</li>
+<li>Be the last man standing</li>
+<li>Don't die</li>
+<li>Beat the clock; don't run out of time</li>
+<li>Character building</li>
+<li>Build relationships</li>
+<li>Solve a puzzle</li>
+<li>Level up</li>
+<li>Make the right choices (well, try not to screw up)</li>
+</ul>
+
+<h3>Designing the Gameplay: Making the Fun Happen</h3>
+<ul>
+<li>Some skill or strategy involved</li>
+<li>Feeling of accomplishment</li>
+<li>Immersion: you are living a different life, or something that you wish you were</li>
+<li>Anticipation: do I look forward to playing this?  Can this pass time?  Sometimes addiction.</li>
+<li>Replay value</li>
+<li>A good story</li>
+<li>Believable story</li>
+<li>Good production</li>
+<li>Real-world feel</li>
+<li>Bug-free</li>
+<li>At least give me a chance</li>
+<li>Reasonable learning curve</li>
+<li>Some variety</li>
+<li>Not too linear</li>
+<li>Game balance</li>
+<li>Competition</li>
+<li>Well, is it suitable for certain people?</li>
+</ul>
+
+<h3>Core Mechanics</h3>
+<ul>
+<li>Determines how the game actually operates</li>
+<li>Consist of data and algorithms that precisely define the game's rules and internal operations</li>
+<li>Should be so precisely stated that the programmers can write the code</li>
+<li>Its functions:
+<ul>
+<li>Operate the internal economy of the game</li>
+<li>Present active challenges</li>
+<li>Accept player actions</li>
+<li>Detect victory or loss</li>
+<li>Operate the artificial intelligence</li>
+<li>Switch the game from mode to mode</li>
+<li>Transmit triggers to the storytelling engine</li>
+</ul>
+</li>
+</ul>
+
+<h3>Designing Core Mechanics</h3>
+<ul>
+<li>Keep it simple and elegant</li>
+<li>Look for patterns, then generalize</li>
+<li>Don't strive for perfection (on paper)</li>
+<li>Refinement is important</li>
+</ul>
+
+<h3>What are the rules and core mechanics of <span class="title">Monopoly</span>?</h3>
+
+<h3>Game Balance</h3>
+<ul>
+<li>Fairness (start symmetrical: equal resources and powers to all)</li>
+<li>Asymmetrical</li>
+<li>Challenges vs. success</li>
+<li>Meaningful choices: low risk / low reward, high risk / high reward</li>
+<li>Short vs. long</li>
+<li>Rewards</li>
+<li>Punishment</li>
+</ul>
+
+<h3>Feedback</h3>
+<ul>
+<li>What happens when you win?</li>
+<li>What if you lose?</li>
+</ul>
+
+<h3>Uh oh.....Game Design and Gameplay Blunders</h3>
+<ul>
+<li>Very flat; linear gameplay</li>
+<li>Incorrect facts</li>
+<li>Really really poor production: bad acting, bad voiceover, bad translation, bad everything</li>
+<li>Bad physics</li>
+<li>The unfinished or rushed game.  The consequences:
+<ul>
+<li>Overworked developers</li>
+<li>Bad testing; bugs galore</li>
+<li>Doesn't sell well</li>
+<li>Players get pissed</li>
+<li>Patch /update hell</li>
+</ul>
+</li>
+<li>I need the CD to play this game?</li>
+<li>False promise (a.k.a., Duke Nukem Forever)
+<ul>
+<li>Not as good as advertised</li>
+<li>WHAT?  I HAVE TO PAY FOR THIS PLUGIN IN THE GAME?!?!?!?!</li>
+</ul>
+</li>
+<li>Dead as you know it</li>
+<li>Unrealistic storyline</li>
+<li>LOOOOOOOOOOOOOOOOOOONG movie that you CAN'T SKIP</li>
+<li>Bad camera control</li>
+<li>Bad AI</li>
+<li>Repetition, no variety</li>
+<li>You can't save</li>
+<li>I don't know what to do; lack of feedback</li>
+<li>Really really clunky user interface</li>
+<li>Too much emphasis on sound, graphics</li>
+<li>Really bad sequel</li>
+<li>Really bad support</li>
+<li>Poor lighting</li>
+<li>Bad port</li>
+<li>Poor performance; game crashes</li>
+</ul>
+
+<h3>Game Genres</h3>
+<ul>
+<li>Classifications of digital game features</li>
+<li>Describe the style of the game</li>
+<li>Problems:
+<ul>
+<li>Most games fit into multiple genres</li>
+<li>The list of nomenclatures goes on forever (see below)</li>
+<li>No standard; been an issue of controversy</li>
+</ul>
+</li>
+<li>Importance: Set expectations
+<ul>
+<li>For players: they know what to expect in the game</li>
+<li>For developers: they have to adhere to the design patterns (sometimes known as the "unwritten rules") of the genre</li>
+</ul>
+</li>
+</ul>
+
+<h3>The Running List of Popular Genre Nomenclatures</h3>
+<ul>
+<li>Strategy</li>
+<li>First-Person Shooter (FPS)</li>
+<li>Real-Time Strategy (RTS)</li>
+<li>MMORPG</li>
+<li>RPG</li>
+<li>Adventure</li>
+<li>Action</li>
+<li>Simulation</li>
+<li>Sports
+<ul>
+<li>Racing</li>
+</ul>
+</li>
+<li>Shoot 'Em Ups / Beat 'Em Ups / Blow 'Em Ups</li>
+<li>Brawlers</li>
+<li>Fighting</li>
+<li>Sidescroller</li>
+<li>Puzzle</li>
+<li>Party</li>
+<li>God Games</li>
+<li>Music</li>
+<li>Space Shooter</li>
+<li>2D Space</li>
+<li>Movie-Based / Full-Motion Video</li>
+<li>History</li>
+<li>Education / Edutainment</li>
+<li>Simulation</li>
+<li>Stealth</li>
+<li>Interactive Fiction</li>
+<li>Text</li>
+<li>...and this list goes on!</li>
+</ul>
+
+<h3>Genre: 2D Space (a.k.a., Shoot 'Em Ups; Arcade)</h3>
+<ul>
+<li>Examples: Space Invaders, Asteroids, R-Type, Defender, Chromium</li>
+<li>Spurred the arcade boom in the '80s</li>
+<li>Easy to develop</li>
+<li>Problems: unrewarding; stale; not a good sell anymore</li>
+</ul>
+
+<h3>Genre: Simulation</h3>
+<ul>
+<li>Examples: SimCity, any EA sport game</li>
+<li>Mimics real-world scenarios, including physics, atmosphere, and limitations</li>
+</ul>
+
+<h3>Genre: Massively Multiplayer Online Role Playing Games (MMORPGs)</h3>
+<ul>
+<li>Examples: World of Warcraft, Everquest, City of Heroes, City of Villians</li>
+<li>Descendant of interactive fiction and Multi-User Dungeons (MUDs) (e.g., Ultima)</li>
+<li>Popularly subscription-based for revenue stream</li>
+<li>Character-building</li>
+<li>Requires computer networking</li>
+<li>Problems: software patches; out-of-game economies; addiction; can have lots of mundane and boring tasks</li>
+</ul>
+
+<h3>Genre: Interactive Fiction (a.k.a., Adventure, Text-Based or Graphical)</h3>
+<ul>
+<li>Examples: Blade Runner, the book, Adventure, Zork</li>
+<li>Sometimes known as interactive drama</li>
+<li>Immersive story</li>
+<li>Primarily text</li>
+<li>Completeness of world</li>
+<li>Prose</li>
+<li>Challenges and puzzles are typically conceptual solved by lateral thinking</li>
+<li>The world is essentially a (mathematical graph) where each node in the graph is a separate scene
+<ul>
+<li>Tree</li>
+<li>Death trap (many ways to be dead)</li>
+<li>Open world</li>
+</ul>
+</li>
+<li>You are faced with discrete and limited choices</li>
+<li>You could be dead as you know it, or loop around the world with no end</li>
+<li>What to avoid
+<ul>
+<li>Puzzles solvable only by trial-and-error</li>
+<li>Illogical spaces.  Perfect example: <span class="title">Legend of Zelda</span> (NES), the second quest</li>
+<li>Require outside knowledge</li>
+</ul>
+</li>
+</ul>
+
+<h3>Elements of a Game Design Document</h3>
+<ul>
+<li>Game Title</li>
+<li>Overview</li>
+<li>Gameplay mode</li>
+<li>Core features in the game</li>
+<li>Secondary features in the game</li>
+<li>State diagrams (schematics)</li>
+<li>Internal economy</li>
+<li>Game balance</li>
+<li>Victory conditions</li>
+<li>Interface design (high-tech or low-tech)</li>
+</ul>
+
+<h3>The Importance of a Game Design Document</h3>
+<ul>
+<li>Memory (i.e., Have a plan?  Write it down!)</li>
+<li>Communications</li>
+<li>Identify system limitations</li>
+<li>Scope tentative project plan and budget</li>
+<li>Good read: <a href="http://www.gamedev.net/page/resources/_/business/business-and-law/the-7-deadly-sins-of-startup-companies-r2603" target="_blank">The 7 Deadly Sins of Startup Companies</a></li>
+</ul>
+
+</div>
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+    var pageTracker = _gat._getTracker("UA-582953-7");
+    pageTracker._trackPageview();
+  }
+  catch(err) {}
+</script>
+
+</body>
+</html>
