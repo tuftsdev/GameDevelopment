@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<link rel="stylesheet" href="../stylesheets/default.css" type="text/css" media="screen" />
+<title>COMP 23: Introduction to Game Development - Game Development Methodologies</title>
+</head>
+
+<body>
+<div id="main">
+
+<div id = "header">
+<h1>Introduction to Game Development</h1>
+<h2>Game Development Methodologies</h2>
+</div>
+
+<h3>In General...</h3>
+<ul>
+<li>~80% of the development is design</li>
+<li>~20% of the development is the actual coding</li>
+<li>Planning and some documentation are important</li>
+</ul>
+
+<h3>Why Do Some Many Game Projects Fail?</h3>
+<ul>
+<li>Unachievable ship date</li>
+<li>Bugs galore</li>
+<li>Overworked developers</li>
+<li>Cost-overruns</li>
+<li>High licensing costs</li>
+<li>Difference in goals and methodologies among team members or groups</li>
+<li>Unreasonable goals; "too many ideas"; "feature creep"</li>
+<li>Dedication</li>
+<li>Skill and knowledge</li>
+<li>Poor project management</li>
+<li>Studio culture</li>
+</ul>
+
+<h3>Case Study: Duke Nukem Forever</h3>
+<ul>
+<li>Announced on April 28, 1997</li>
+<li>3D Realms, the game's developer, closed its doors on May 6, 2009</li>
+<li>"Normally, videogames take two to four years to build; five years is considered worryingly long. But the Duke Nukem Forever team worked for 12 years straight. As one patient fan pointed out, when development on Duke Nukem Forever started, most computers were still using Windows 95, Pixar had made only movie one Story Toy and Xbox did not yet exist.  On May 6, 2009, everything ended. Drained of funds after so many years of work, the game's developer, 3D Realms, told its employees to collect their stuff and put it in boxes. The next week, the company was sued for millions by its publisher for failing to finish the sequel."  Source: Wired.com, <a href="http://www.wired.com/magazine/2009/12/fail_duke_nukem/" target="_blank">http://www.wired.com/magazine/2009/12/fail_duke_nukem/</a></li>
+<li>Bittersweet ending: playable game  at PAX East in March 2011, finally released in June 2011</li>
+<li>What went terribly wrong:
+<ul>
+<li>Overweening perfectionism; good enough wasn't acceptable</li>
+<li>Staggering wealth, thanks to Duke Nukem 3D</li>
+<li>Obsession with upgrades - Quake II engine, Unreal engine</li>
+<li>No formal deadline, delivery date</li>
+<li>Arrogant co-owner and project lead</li>
+<li>Burnt-out programmers: "I left because I was burned out after working on the same project for five years without any end in sight"</li>
+<li>Near the end, 3D Realms went on a hiring spree and also borrowed money from Take-Two (the same publisher of the Grand Theft Auto series) to complete the game</li>
+</ul>
+</li>
+<li>The Duke Nukem Forever List -events that occurred since its announcement on April 28, 1997: <a href="http://duke.a-13.net/" target="_blank">http://duke.a-13.net/</a></li>
+<li><a href="http://www.escapistmagazine.com/videos/view/zero-punctuation/748-Duke-Nukem-Forever" target="_blank">Zero Punctuation: Duke Nukem Forever</a></li>
+</ul>
+
+<h3>A Growing Crisis</h3>
+<ul>
+<li>The game industry now rakes in more cash than Hollywood ($50 billion)</li>
+<li>Needs maturity</li>
+<li>A high proportion of developers are leaving the industry</li>
+<li>That was then: game development didn't require artists or designers; it started with one electrical engineer; then a programmer; 0 to 5 people-years to develop a game.</li>
+<li>This is now: an armada of developers, artists, testers, and managers for a AAA game; 120+ people-years to create a AAA game as of 2005</li>
+<li>Safe bets, easier money: ride on the success of previous titles or popular movies</li>
+<li>Alas, less risk =&gt; less innovation =&gt; less value =&gt; boom of used games market</li>
+<li>Higher production cost</li>
+<li>Developers can work 12 hrs / day 7 days a week for months during crunch</li>
+</ul>
+
+<h3>Early Methodology 1: The Arcade Gold Rush</h3>
+<ul>
+<li>A single $3000 arcade could collect more than $1000 in quarters per weekend</li>
+<li>A considerable investment for one arcade game (1000 boxes * $3000 = $3 million required)</li>
+<li>Field test a game idea by placing a mocked-up production machine in an arcade alongside other games</li>
+<li>This is the hit-or-miss model: decide to mass-produce, tweak, or cancel arcade based on number of quarters in the field tested arcade</li>
+</ul>
+
+<h3>Early Methodology 2: The Classical Waterfall Model (or Game Waterfall Process)</h3>
+<ul>
+<li>Requirements Phase
+<ul>
+<li>Kickoff meeting(s) with the business analysts, product managers, and senior development personnel</li>
+<li>Provide an overview of your game</li>
+<li>Establish project goals</li>
+<li>Set a tentative development budget</li>
+<li>Set a tentative development timeline</li>
+</ul>
+</li>
+<li>Specification Phase
+<ul>
+<li>Define what the game should do to meet needs</li>
+<li>Detail high-level functionality (e.g., the important features)</li>
+<li>Detail secondary-level features (e.g., nice to have, but not critical)</li>
+<li>Identify gameplay modes</li>
+<li>Identify settings, mechanics, interaction models, etc.</li>
+<li>Outline how the game is "won"</li>
+</ul>
+</li>
+<li>Design Phase
+<ul>
+<li>Get to the specifics of the game based on specification</li>
+<li>Identify all the actions, errors, tokens, states, labels in the game (ideal to draw a state diagram on how the user moves around the game)</li>
+<li>Draw mockup screenshots of environment</li>
+<li>Draw mockup screenshots of user interface</li>
+<li>Write a low-level (technical) design on all the functions of the game (e.g., menu items)</li>
+</ul>
+</li>
+<li>Implementation Phase
+<ul>
+<li>The actual programming (or coding) of the game based on the design specification</li>
+</ul>
+</li>
+<li>Integration Phase
+<ul>
+<li>Put everything together into a finished game</li>
+<li>Several rounds of testing</li>
+<li>Fix lingering bugs</li>
+<li>Release beta test of product for people to try it out</li>
+</ul>
+</li>
+<li>Operation Mode
+<ul>
+<li>The game has "gone gold"</li>
+<li>Game is rolled-out to production (actual use)</li>
+<li>Maintenance - keep the product working and useful to players</li>
+<li>Fix lingering bugs</li>
+<li>Add enhancements to game</li>
+<li>Release patches</li>
+</ul>
+</li>
+<li>Retirement
+<ul>
+<li>NOT rare in computer / video gaming (unlike business software)</li>
+<li>Remove the product from service (thus, product is no longer supported)</li>
+<li>Guard legacy source code</li>
+</ul>
+</li>
+</ul>
+
+<h3>MAJOR Problems with Waterfall Model</h3>
+<ul>
+<li>Too popular (and beaten into the heads of countless software engineers)</li>
+<li>You cannot move on to the next phase without completing the current phase...</li>
+<li>...and you cannot go backwards!</li>
+<li>Very time-consuming and exhaustive</li>
+<li>Document centric</li>
+<li>Cascading-effects to next phase</li>
+<li>Alas, QA is a "low-hanging fruit"</li>
+</ul>
+
+<h3>Many Variations of the Software Life Cycle Model</h3>
+<ul>
+<li>Rapid prototyping phase before specification (very popular)</li>
+<li>Build game in increments (repeated loop; baby steps) - merge design, implementation, and integration phases into a repeated block
+<ul>
+<li>There is always something tangible</li>
+<li>Checkpoints and testing are important</li>
+<li>Reduces errors</li>
+</ul>
+</li>
+<li>"Creative writing seminar" - best written components and modules wins</li>
+<li>Extreme Programming (XP)
+<ul>
+<li>Team-based and very collaborative</li>
+<li>Hardly any documentation</li>
+<li>Unit tests</li>
+<li>Success depends on ALL members of the team on the same page</li>
+<li>Very fast (average 6 month for project)</li>
+<li>Programmers are king, alas, alienating others</li>
+</ul>
+</li>
+</ul>
+
+<h3>Agile</h3>
+<ul>
+<li>Iterative process</li>
+<li>You can develop knowledge over time.  What does this mean?
+<ul>
+<li>"Find the fun"</li>
+<li>You don't want to repeat the same mistakes</li>
+</ul>
+</li>
+<li>Process (repeat)
+<ul>
+<li>Concept</li>
+<li>Design</li>
+<li>Coding</li>
+<li>Asset creation</li>
+<li>Debugging</li>
+<li>Optimizing</li>
+<li>Tuning and polishing</li>
+</ul>
+</li>
+<li>Progressive goal</li>
+<li>Potential problem: culture of studio and publisher</li>
+</ul>
+
+<h3>The Importance of Prototyping </h3>
+<ul>
+<li>All about the interaction</li>
+<li>Ensure the core mechanics work</li>
+<li>Test the fundamental rules of the game</li>
+<li>Visuals are secondary</li>
+</ul>
+
+<h3>Game Design and Development According to Sid Meier</h3>
+<ul>
+<li>His r&eacute;sum&eacute; of games:
+<ul>
+<li>Civilization {I, II, III, and IV}</li>
+<li>Pirates!</li>
+<li>Railroad Tycoon</li>
+<li>Gettysberg! and Antietam!</li>
+<li>Alpha Centauri</li>
+<li>SimGolf</li>
+</ul>
+</li>
+<li>Players should have the fun, not the programmer or designer</li>
+<li>Begin the game with great opening minutes</li>
+<li>Great gameplay is a stream of interesting decision that the player must resolve</li>
+<li>Put the player in a position where he/she is the hero</li>
+<li>His development process:
+<ul>
+<li>Prototype</li>
+<li>Play the game for a while and get the basics right</li>
+<li>Now get other people to look at the game</li>
+<li>Meticulously observe the player</li>
+<li>Constantly reward the player in the game</li>
+<li>Throw in new testers</li>
+<li>Make the game harder until the players beg for mercy</li>
+</ul>
+</li>
+<li>Read his interview on Slashdot: <a href="http://interviews.slashdot.org/article.pl?sid=05/10/21/0550213&amp;tid=11" target="_blank">http://interviews.slashdot.org/article.pl?sid=05/10/21/0550213&amp;tid=11</a></li>
+</ul>
+
+</div>
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+    var pageTracker = _gat._getTracker("UA-582953-7");
+    pageTracker._trackPageview();
+  }
+  catch(err) {}
+</script>
+
+</body>
+</html>

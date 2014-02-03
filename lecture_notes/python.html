@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<link rel="stylesheet" href="../stylesheets/default.css" type="text/css" media="screen" />
+<title>COMP 23: Introduction to Game Development - Python Programming</title>
+</head>
+
+<body>
+<div id="main">
+
+<div id = "header">
+<h1>Introduction to Game Development</h1>
+<h2>Python Programming</h2>
+</div>
+
+<h3>Python Overview</h3>
+<ul>
+<li><span class="stress">And now for something completely different</span></li>
+<li>General purpose, high-level, open source programming language</li>
+<li>Commonly dubbed as a scripting language </li>
+<li>Very flexible and agile</li>
+<li>Invented by Guido van Rossum, Python's Benevolent Dictator for Life (BDFL), now at Google</li>
+<li>Name is based off of <span class="title">Monty Python</span></li>
+<li>Usage
+<ul>
+<li>Google App Engine</li>
+<li>BitTorrent</li>
+<li>Software for One Laptop Per Child XO</li>
+<li>Google</li>
+<li>YouTube</li>
+<li>Web applications and web servers</li>
+<li>System administration</li>
+<li>Scripting language for many software packages including Blender and Maya</li>
+<li><a href="http://www.reddit.com/" target="_blank">Reddit</a></li>
+</ul>
+</li>
+</ul>
+
+<h3>From a Programming Language Standpoint</h3>
+<ul>
+<li>Interpreted</li>
+<li>Supports object-oriented programming (OOP)</li>
+<li>Dynamically typed (i.e., variable can refer to a value of any type)</li>
+<li>Automatic memory management</li>
+<li>Supports functional programming</li>
+<li>Embedding and extending in C</li>
+</ul>
+
+<h3>Why Python?</h3>
+<ul>
+<li>Platform-independent and portable</li>
+<li>Versatility; what you can do: system utilities, games, Internet scripts, rapid prototypes, database access, image processing, web applications</li>
+<li>Generally very fast (near the speed of C)</li>
+<li>Excellent community support</li>
+<li>Truly open source</li>
+<li><code>&gt;&gt;&gt; import this</code> <pre>
+The Zen of Python (by Tim Peters)
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated. 
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!</pre></li>
+</ul>
+
+<h3>Python in Games</h3>
+<ul>
+<li><span class="title">Civilization IV</span></li>
+<li><span class="title">Battlefield 2</span></li>
+<li><span class="title">EVE Online</span></li>
+<li><span class="title">Disney's Pirates of the Caribbean Online (MMORPG)</span></li>
+<li><a href="http://www.pygame.org/" target="_blank">Pygame</a></li>
+<li><a href="http://wiki.python.org/moin/PythonGames" target="_blank">More...</a></li>
+</ul>
+
+<h3>Environment</h3>
+<ul>
+<li>We will use Python 2.7.x in this class</li>
+<li><a href="http://wiki.python.org/moin/IntegratedDevelopmentEnvironments" target="_blank">List of Python IDEs</a></li>
+</ul>
+
+<h3>The Structure of a Python Program</h3>
+<pre>
+# pyguess.py
+from random import randint
+
+min = 1
+max = 100
+secret = randint(min, max)
+print("Welcome!")
+guess = 0
+numGuesses = 0
+while guess != secret:
+	guess = 0
+	while guess &lt; min or guess &gt; max:
+		g = input("Guess the number between " + str(min) + " and " + str(max) + " (inclusive): ")
+		guess = int(g)
+		if guess &lt; min or guess &gt; max:
+			print "You bozo, your guess does not count.  Try again."
+	numGuesses = numGuesses + 1 # Anything interesting?
+	if guess == secret:
+		print("You win!  It took you " + str(numGuesses) + " guesses.")
+	else:
+		if guess &gt; secret:
+			print("Too high")
+		else:
+			print("Too low")
+print("Game over!")
+</pre>
+
+<h3>Preliminaries</h3>
+<ul>
+<li>File extension: <code>.py</code></li>
+<li>For experienced programmers, some of the "usual gang" of stuff will look a bit different</li>
+<li>Conformity is important in Python</li>
+<li>Code blocks - code is structured by whitespaces or tabs (so no more flame wars on style).  No more curly braces ({})</li>
+<li>Any line that ends with a colon (:) will tell the Python compiler that the next line should be a sub-code block</li>
+<li>Use <code>#</code> for a comment, not <code>//</code> or <code>/* */</code></li>
+<li>No semicolon (<code>;</code>) at the end of statements</li>
+</ul>
+
+<h3>Interpreter</h3>
+<ul>
+<li>Very much like the Unix / Linux shell, Command Prompt</li>
+<li>On executing the interpreter by itself (i.e., <code>python</code>), it reads and executes commands interactively.  The prompt: <code>&gt;&gt;&gt;</code></li>
+<li>On executing the interpreter with a file as standard input, it reads and executes a script from that file. <span class="stress">We will primarily use this option.</span></li>
+<li><a href="http://docs.python.org/library/functions.html" target="_blank">List of built-in functions (python.org)</a></li>
+<li>Example: <code>len("hownowbrowncow")</code> returns the length of the string "hownowbrowncow" (14)</li>
+<li>To make your Python script an executable (e.g., shell script) on a Unix / Linux system, add the line <code>#! /usr/bin/env python</code> to the top of your script and change the file's permission to 755 or <code>chmod 755 YOUR_SCRIPT</code></li>
+</ul>
+
+<h3>Arithmetic Operators</h3>
+<ul>
+<li>The usual gang: +, -, *, /, %</li>
+<li><code>**</code> - exponent</li>
+<li><code>//</code> - floor division</li>
+</ul>
+
+<h3>Truth and Booleans</h3>
+<ul>
+<li><code>True</code></li>
+<li><code>False</code></li>
+</ul>
+
+<h3>Comparison Operators</h3>
+<ul>
+<li>The usual gang: &lt;, &gt;, &gt;=, &lt;=, ==, != (or &lt;&gt;)</li>
+</ul>
+
+<h3>Assignment Operators</h3>
+<ul>
+<li>The usual gang: =, += (e.g., c+=a is equivalent to c = c + a), -=, *=, /=, %=</li>
+<li><code>**=</code> - c**a is equivalent to c = c ** a</li>
+<li><code>//=</code></li>
+<li>No increment or decrement operators (<code>++</code> or <code>--</code>)</li>
+</ul>
+
+<h3>Logical Operators</h3>
+<ul>
+<li><code>not</code></li>
+<li><code>and</code></li>
+<li><code>or</code></li>
+</ul>
+
+<h3>Operator Precedence</h3>
+<ul>
+<li>See list: <a href="http://docs.python.org/reference/expressions.html" target="_blank">http://docs.python.org/reference/expressions.html</a></li>
+</ul>
+
+<h3>Variables</h3>
+<ul>
+<li>These are all legal:
+<ul>
+<li><code>foo = 1</code></li>
+<li><code>foo = "1"</code></li>
+<li><code>foo = '1'</code></li>
+<li><code>foo = 1.1</code></li>
+</ul>
+</li>
+<li>Variables can be re-assigned at any time to different types of data; very flexible</li>
+</ul>
+
+<h3>Control Flow (<code>if-then</code>)</h3>
+<ul>
+<li><pre>
+	if <span class="def">STATEMENT</span>:
+		...
+		...
+	else:
+		...
+		...
+</pre></li>
+<li><pre>
+	if <span class="def">STATEMENT</span>:
+		...
+		...
+	elif <span class="def">STATEMENT</span>:
+		...
+		...
+	elif <span class="def">STATEMENT</span>:
+		...
+		...
+	else:
+		...
+		...
+</pre></li>
+<li>No parentheses around conditional statement</li>
+<li>Example: see guessing game above</li>
+<li>Sorry folks, Python does not have a <code>switch</code> statement (which could have come in handy)</li>
+</ul>
+
+<h3>Strings</h3>
+<ul>
+<li>Can be enclosed in single quotes or double quotes.  The difference?</li>
+<li><pre>
+&gt;&gt;&gt; 'spam eggs'
+'spam eggs'
+&gt;&gt;&gt; 'doesn\'t'
+"doesn't"
+&gt;&gt;&gt; "doesn't"
+"doesn't"
+&gt;&gt;&gt; '"Yes," he said.'
+'"Yes," he said.'
+&gt;&gt;&gt; "\"Yes,\" he said."
+'"Yes," he said.'
+&gt;&gt;&gt; '"Isn\'t," she said.'
+'"Isn\'t," she said.'
+</pre></li>
+<li>Can span multiple lines via newline character <code>\n</code> in double-quoted string</li>
+<li>String concatenation: by <code>+</code> or <code>*</code> (repeat).  Examples:
+<ul>
+<li><code>str = 'The' + 'Fonz' # str will become 'TheFonz'</code></li>
+<li><code>str = 'TheFonz' * 5 # str will become 'TheFonzTheFonzTheFonzTheFonz'</code></li>
+</ul>
+</li>
+<li>Can be subscripted (indexed); like in C, the first character of a string has subscript (index) 0</li>
+<li>"Slicing" examples (for <code>s = "Hello"</code>):
+<ul>
+<li><code>s[4] is 'o'</code></li>
+<li><code>s[1:] is 'llo'</code></li>
+<li><code>s[-4] is 'e' # 4th character from the end</code></li>
+<li><code>s[:-3] is 'He' # going up to but not including the last 3 chars</code></li>
+</ul>
+</li>
+<li>List of string methods: <a href="http://docs.python.org/library/stdtypes.html#string-methods" target="_blank">http://docs.python.org/library/stdtypes.html#string-methods</a></li>
+</ul>
+
+<h3><code>pass</code> Statement</h3>
+<ul>
+<li>Does nothing</li>
+<li>Commonly used as a placeholder</li>
+</ul>
+
+<h3>Functions</h3>
+<ul>
+<li>Starts with keyword <code>def</code></li>
+<li>Parenthesized list of formal parameters; arguments are passed using call-by-value</li>
+<li>Documentation string (or docstring) - the first statement of function body that describes the purpose of the function.  This is optional but is excellent practice.  Enclosed with three quotes <code>"""</code></li>
+<li>The <code>return</code> statement returns with a value from a function</li>
+<li>Example: <a href="https://github.com/mchow01/GameDevelopment/blob/master/python/fibonacci.py" target="_blank"><code>fibonacci.py</code></a></li>
+</ul>
+
+<h3>Data Structures</h3>
+<ul>
+<li><span class="def">List</span> - written within square brackets [] (a.k.a., array)</li>
+<li>Example 1: <code>jacksons = ['Michael', 'Janet', 'Jermaine', 'LaToya']</code></li>
+<li>The usual gang: indexing starts at 0</li>
+<li>Example 2: <code>jacksons[2]</code> returns the third element in the list (Jermaine)</li>
+<li>Watch out! The assignment operator = does not make a copy of a list but just a pointer in memory to it</li>
+<li>Like slicing a string, you can also slice a list</li>
+<li>List methods: <a href="http://docs.python.org/tutorial/datastructures.html" target="_blank">http://docs.python.org/tutorial/datastructures.html</a></li>
+<li><span class="def">Tuple (or sequence)</span> - written within parentheses ().  However, is immutable.  That is, you cannot add, remove, or change items once the sequence is created.</li>
+<li><span class="def">Dictionary</span> - written within curly braces {}.  Also known as a hash or an associative array.  Assign a value to a key which can be a string or an integer index</li>
+<li>Example 3: <code>emails = {'TheRock':'therock@knowyourrole.com', 'William Bonney':'billythekid@yahoo.com', 'Homer Simpson':'hoj@fox.com'}</code></li>
+<li>Example 4: <a href="https://github.com/mchow01/GameDevelopment/blob/master/python/dict.py" target="_blank"><code>dict.py</code></a></li>
+<li>Example 5:
+<pre>
+cats = {}
+cats['fat'] = 'Garfield'
+</pre>
+</li>
+<li>Dictionary methods: <a href="http://docs.python.org/library/stdtypes.html#typesmapping" target="_blank">http://docs.python.org/library/stdtypes.html#typesmapping</a></li>
+</ul>
+
+<h3>Loops</h3>
+<ul>
+<li><code>while</code> - usual gang; see guessing game example above</li>
+<li><code>for</code> - does not iterate over an arithmetic progression of numbers but instead iterates over the items of any sequence (e.g., list). Use the <code>in</code> keyword to test if an element is in a set / list.  Two ways:
+<ul>
+<li><code>for i in range(10): # go through numbers from 0 through 9</code></li>
+<li><pre>
+list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+for i in list:
+</pre></li>
+</ul>
+</li>
+<li>Example:
+<pre>
+for key in emails:
+	print k + " =&gt; " + emails[k]
+</pre>
+</li>
+<li>No <code>do-while</code></li>
+</ul>
+
+<h3>Input / Output</h3>
+<ul>
+<li><code>print</code> (duh!)</li>
+<li>For C buffs, format string lives! Use <code>%</code>.  Example:
+<pre>
+import math
+print 'The value of PI is approximately %5.3f.' % math.pi
+</pre>
+</li>
+<li><code>input()</code></li>
+<li><code>raw_input()</code></li>
+</ul>
+
+<h3>File Input / Output</h3>
+<ul>
+<li><code>open()</code> function - Opens a file for reading, returns a file handle (pointer to the first line of the file)</li>
+<li>Call the <code>close()</code> method on the file handle to close reading of the file at the end</li>
+<li>Example 1 (reading):
+<pre>
+f = open('foo.txt', 'r')
+for line in f:
+	print line
+f.close()
+</pre>
+</li>
+<li>File permissions: 'r' = read, 'w' = write, 'a' = append, 'r+' = read-write</li>
+<li>On Windows, 'b' appended to the mode opens the file in binary mode</li>
+<li><code>f.readline()</code> - Reads a single line from file</li>
+<li><code>f.write()</code> - Write to file</li>
+<li>Example 2 (writing; what is the output?)
+<pre>
+# What is the output?
+
+f = open('test.txt', 'w')
+f.write("Hi!")
+f.write("Ho!")
+f.close()
+</pre>
+</li>
+</ul>
+
+<h3>Modules</h3>
+<ul>
+<li>The purpose of a <span class="def">module</span>: a way to put Python definitions and statements in a file and use them in a script or in an interactive instance of the interpreter</li>
+<li>Allows for code reusability</li>
+<li>Import a module in a script or the interpreter via <code>import</code></li>
+<li>Use the module's name followed by a dot (.) to access module's functions</li>
+<li><code>from</code> keyword - loads a Python module into the current namespace, so that you can refer to it without the need to mention the module name again (i.e., no "dot" notation)</li>
+<li>Example 1: <a href="https://github.com/mchow01/GameDevelopment/blob/master/python/urltest.py" target="_blank"><code>urltest.py</code></a></li>
+<li>Example 2: <a href="http://docs.python.org/library/urllib.html" target="_blank"><code>urllib</code></a> and <a href="http://docs.python.org/library/urllib2.html" target="_blank"><code>urllib2</code></a></li>
+<li>Example 3: <a href="http://docs.python.org/library/os.html" target="_blank"><code>os</code></a></li>
+<li>Example 4: <a href="http://docs.python.org/library/math.html" target="_blank"><code>math</code></a></li>
+<li>Example 5: <a href="http://docs.python.org/library/pickle.html" target="_blank"><code>pickle</code></a> (very powerful)</li>
+<li>Example 6: <a href="http://docs.python.org/library/random.html" target="_blank"><code>random</code></a></li>
+<li>Example 6A: <pre>
+	import random
+
+	randnum = random.randint(1, 100)
+	print randnum
+</pre></li>
+<li>The <code>dir()</code> function - lists the names a module defines</li>
+</ul>
+
+<h3>Testing Module</h3>
+<ul>
+<li><code>if __name__ == "__main__":</code></li>
+<li>Modules are objects, and all modules have a built-in attribute <code>__name__</code></li>
+<li>If you import the module, then <code>__name__</code> is the module's filename, without a directory path or file extension</li>
+<li>If you run the module directly as a standalone program, then <code>__name__</code> will be a special default value <code>__main__</code></li>
+<li>Example: <a href="https://github.com/mchow01/GameDevelopment/blob/master/python/maintest.py" target="_blank"><code>maintest.py</code></a></li>
+</ul>
+
+<h3>Objects</h3>
+<ul>
+<li>An <span class="def">object</span> is a thing obeying a set of conditions</li>
+<li>A <span class="def">condition</span> can assert the existence of a piece of data or a function inside the object. Data and functions that must be present are called <span class="def">members</span></li>
+<li>An <span class="def">instance</span> of an object is one of the things obeying the conditions</li>
+<li>A description of an object (with all conditions specified) is called a <span class="def">class</span>. This is nothing more than a list of things that must be defined before you have an object.</li>
+<li>The <span class="def">superclass</span> (or <span class="def">base class</span>) - Defines "generic" instance variables and methods that apply in many situations</li>
+<li>The <span class="def">subclass</span> (or <span class="def">derived class)</span> - Specializes, extends, or inherits from a superclass need not give new implementations for the general methods, for it inherits them by adding conditions (functions and data).  Should only define those specialized methods for this particular subclass.</li>
+<li>We list an object hierarchy with the most general (most super) classes at the top, and the most specific (most subordinate) class at the bottom ("is a" relationship)</li>
+<li><span class="def">Polymorphism</span> is the ability of an object variable to take different forms.  <span class="def">Overloading</span> is a type of polymorphism.  Example: <code>+</code> operator.</li>
+<li class="stress">Everything in Python is an object</li>
+</ul>
+
+<h3>Classes</h3>
+<ul>
+<li><code>class ClassName:</code></li>
+<li>Class instantiation uses function notatation.  Example: <code>x = MyClass()</code></li>
+<li><code>def __init__(self):</code> - the constructor, run when the class is instantiated.  You can have multiple parameters for the <code>__init__</code> method</li>
+<li><code>def __del__(self)</code> - the destructor (hardly needed)</li>
+<li>All class methods shall have <code>self</code> as first parameter</li>
+<li>When you call a method of an ancestor class from within your class, you must include the <code>self</code> argument</li>
+<li>When you call your class method from outside, you do not specify anything for the <code>self</code> argument; you skip it entirely, and Python automatically adds the instance reference for you</li>
+<li>No <code>new</code></li>
+<li>Classes can (and should) have doc strings too!</li>
+<li>To access a member of the class (method or data attribute), use "dot notation" (.)</li>
+<li>Inheritance is easy: <code>class DerivedClassName(BaseClassName):</code></li>
+<li>Example: <code>class Square(Shape):</code></li>
+<li>Unlike many other languages, multiple inheritance is supported.  In layman term, a child or subclass can have more than one parent.</li>
+<li>What about traditional "private" variables in a class for information hiding?  They do not exist in Python!  Instead, use the Python convention to put an underscore (_) prefix to an object variable name to denote it as "private"</li>
+<li>Example 1:
+<pre>
+class Foo:
+	""" My first class """
+	def __init__(self):
+		print "Hi!"
+
+	def setx (self, x):
+		self.x = x
+		
+	def bar (self):
+		print self.x
+
+if __name__ == "__main__":
+	f = Foo()
+	f.setx(20)
+	f.bar
+
+# What is the output (and why)?
+</pre>
+</li>
+<li>Example 2:
+<pre>
+class Dog:
+	""" Dog dog dog! """
+	def __init__(self):
+		""" Initializer """
+		print "A dog is born..."
+		self.name = "Fido"
+
+	def setName (self, n):
+		self.name = n
+            
+	def bark(self):
+		print self.name + " says Arf!"
+
+if __name__ == "__main__":
+	brian = Dog()
+	brian.setName("Brian")
+	for i in range(5):
+		brian.bark()
+
+	lily = Dog()
+	lily.setName("Lily")
+	lily.bark()
+
+	stu = Dog()
+	stu.bark()
+	
+</pre>
+</li>
+</ul>
+
+</div>
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+    var pageTracker = _gat._getTracker("UA-582953-7");
+    pageTracker._trackPageview();
+  }
+  catch(err) {}
+</script>
+
+</body>
+</html>
