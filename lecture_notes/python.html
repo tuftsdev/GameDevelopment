@@ -273,7 +273,23 @@ print("Game over!")
 <li>Parenthesized list of formal parameters; arguments are passed using call-by-value</li>
 <li>Documentation string (or docstring) - the first statement of function body that describes the purpose of the function.  This is optional but is excellent practice.  Enclosed with three quotes <code>"""</code></li>
 <li>The <code>return</code> statement returns with a value from a function</li>
-<li>Example: <a href="https://github.com/mchow01/GameDevelopment/blob/master/python/fibonacci.py" target="_blank"><code>fibonacci.py</code></a></li>
+<li>Example, <code>fibonacci.py</code>:
+<pre>
+def fibonacci (n):
+	""" Returns the Fibonacci number for given integer n """
+	if n == 0:
+		return 0
+	elif n == 1:
+		return 1
+	else:
+		return fibonacci(n-2) + fibonacci(n-1)
+
+n = 25
+for i in range(n):
+	result = fibonacci(i)
+	print "The fibonacci number for ", i, " is ", result
+</pre>
+</li>
 </ul>
 
 <h3>Data Structures</h3>
@@ -288,7 +304,20 @@ print("Game over!")
 <li><span class="def">Tuple (or sequence)</span> - written within parentheses ().  However, is immutable.  That is, you cannot add, remove, or change items once the sequence is created.</li>
 <li><span class="def">Dictionary</span> - written within curly braces {}.  Also known as a hash or an associative array.  Assign a value to a key which can be a string or an integer index</li>
 <li>Example 3: <code>emails = {'TheRock':'therock@knowyourrole.com', 'William Bonney':'billythekid@yahoo.com', 'Homer Simpson':'hoj@fox.com'}</code></li>
-<li>Example 4: <a href="https://github.com/mchow01/GameDevelopment/blob/master/python/dict.py" target="_blank"><code>dict.py</code></a></li>
+<li>Example 4, <code>dict.py</code>:
+<pre>
+bob = {'name': 'Bob Smith', 'age': 42, 'pay': 30000, 'job': 'Developer'}
+sue = {'name': 'Sue Jones', 'age': 45, 'pay': 40000, 'job': 'Musician'}
+charlie = dict(name='Charlie Weis', age=48, pay=1000000, job='Coach')
+database = {}
+database['bob'] = bob
+database['sue'] = sue
+database['charlie'] = charlie
+if __name__ == '__main__':
+	for entry in database:
+		print entry, ' => ', database[entry]	
+</pre>
+</li>
 <li>Example 5:
 <pre>
 cats = {}
@@ -367,7 +396,14 @@ f.close()
 <li>Import a module in a script or the interpreter via <code>import</code></li>
 <li>Use the module's name followed by a dot (.) to access module's functions</li>
 <li><code>from</code> keyword - loads a Python module into the current namespace, so that you can refer to it without the need to mention the module name again (i.e., no "dot" notation)</li>
-<li>Example 1: <a href="https://github.com/mchow01/GameDevelopment/blob/master/python/urltest.py" target="_blank"><code>urltest.py</code></a></li>
+<li>Example 1, <code>urltest.py</code>:
+<pre>
+import urllib2
+
+page = urllib2.urlopen("http://www.cs.tufts.edu/~mchow").readlines()
+print page
+</pre>
+</li>
 <li>Example 2: <a href="http://docs.python.org/library/urllib.html" target="_blank"><code>urllib</code></a> and <a href="http://docs.python.org/library/urllib2.html" target="_blank"><code>urllib2</code></a></li>
 <li>Example 3: <a href="http://docs.python.org/library/os.html" target="_blank"><code>os</code></a></li>
 <li>Example 4: <a href="http://docs.python.org/library/math.html" target="_blank"><code>math</code></a></li>
@@ -388,7 +424,18 @@ f.close()
 <li>Modules are objects, and all modules have a built-in attribute <code>__name__</code></li>
 <li>If you import the module, then <code>__name__</code> is the module's filename, without a directory path or file extension</li>
 <li>If you run the module directly as a standalone program, then <code>__name__</code> will be a special default value <code>__main__</code></li>
-<li>Example: <a href="https://github.com/mchow01/GameDevelopment/blob/master/python/maintest.py" target="_blank"><code>maintest.py</code></a></li>
+<li>Example, <code>maintest.py</code>:
+<pre>
+def square(x):
+	""" Self explanatory """
+	return x * x
+
+if __name__ == '__main__':
+	print "test: square(42) == ", square(42)
+else:
+	print "Someone else is using me!"
+</pre>
+</li>
 </ul>
 
 <h3>Objects</h3>
