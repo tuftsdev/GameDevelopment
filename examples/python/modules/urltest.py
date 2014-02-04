@@ -1,4 +1,4 @@
 import urllib2
 
-page = urllib2.urlopen("http://www.cs.tufts.edu/~mchow").readlines()
+page = urllib2.urlopen("http://www.reddit.com/").readlines()
 print page
