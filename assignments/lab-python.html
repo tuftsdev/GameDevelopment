@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<link rel="stylesheet" href="../stylesheets/default.css" type="text/css" media="screen" />
+<title>COMP 23: Introduction to Game Development - Lab 1</title>
+</head>
+
+<body>
+<div id="main">
+
+<div id = "header">
+<h1>Introduction to Game Development</h1>
+<h2>Lab: Python</h2>
+</div>
+
+<h2>Lab Objectives</h2>
+<ul>
+<li>Practice using Python.</li>
+<li>Practice using Git.</li>
+</ul>
+
+<h2>Instructions</h2>
+<h4 class="note">This lab is worth 5 points.  Instructions: Please complete the following set of programs.  Please only use the following resources:</h4>
+<ul>
+<li><a href="../lecture_notes/python.html">My notes on Python</a></li>
+<li>The official list of Python built-in functions: <a href="http://docs.python.org/library/functions.html" target="_blank">http://docs.python.org/library/functions.html</a></li>
+<li>The official list of Python data structures: <a href="http://docs.python.org/tutorial/datastructures.html" target="_blank">http://docs.python.org/tutorial/datastructures.html</a></li>
+</ul>
+
+<p>1. Write a program <code>ip_addresses.py</code> that lists all possible IPv4 addresses.</p>
+
+<p>2. Write a program called <code>reverselist.py</code> where you create a list of items of your choosing and print it reversed.  Please make this program as short as possible! For example, a list with three strings Tom, Dick, and Harry shall be printed:</p>
+<pre>
+Harry
+Dick
+Tom
+</pre>
+
+<p>3. Write a program <code>word_count.py</code> that counts the number of words in a given input file.  Usage: <code>python word_count.py <em>input_file</em></code>. Your program must count how often each word appears in the file and prints:</p>
+<pre>
+word1 count1
+word2 count2
+word3 count3
+word4 count4
+...
+...
+...
+...
+</pre>
+<p>Print the above list in order sorted by word.  Store all the words as lowercase, so 'The' and 'the' count as the same word.  The last line of the output shall be the total number of words in the file (example: <code>There are 576 words in this file</code>.)  You must also throw an exception (i.e., exit gracefully) if file is invalid or is not found.</p>
+
+<h2>Getting Started</h2>
+<p>I created a private GitHub repo for each of you (if you did Lab 1).  Sign in to GitHub, then click on the pulldown menu under the Octocat logo to switch account context, and select <code>tuftsdev</code>.  You will see a new repo that is named <code>comp23-<em>firstletterofyourfirstnameandyourlastname</em></code> (e.g., <code>comp23-mchow</code>).  You will be using this private repo to submit all future assignments and labs, including this lab.  This is a private repo that only you, the TAs, and I have access to. <span class="note">IMPORTANT: Please verify that you can see this private repo after you sign in to GitHub.</span></p>
+<p>On your computer, create a folder with the same name as the private repo I created for you.  Follow the instructions that you see on GitHub in your private repo on setting up and pushing.</p>
+<p>Inside of the private repo on your computer, create a new folder named <code>python</code> where you will put your three programs.</p>
+
+<h2>The <code>README</code> File</h2>
+<p>Every assignment shall include a <code>README</code> file that describes the work. This description must:</p>
+<ol>
+<li>Identify what aspects of the work have been correctly implemented and what have not.</li>
+<li>Identify anyone with whom you have collaborated or discussed the assignment.</li>
+<li>Say approximately how many hours you have spent completing the assignment.</li>
+<li>Be written in either text format (thus <code>README.txt</code>) or in Markdown (thus <code>README.md</code>). No other formats will be accepted.</li>
+</ol>
+
+<h2>Git References</h2>
+
+<h3>Readings and References</h3>
+<ul>
+<li><a href="http://gitimmersion.com/" target="_blank">Git Immersion</a></li>
+<li><a href="http://git-scm.com/book/en/Getting-Started-Git-Basics" target="_blank">Git Basics</a></li>
+<li><a href="http://eagain.net/articles/git-for-computer-scientists/">Git for Computer Scientists</a></li>
+</ul>
+
+<h2>Course and Assignment Policies</h2>
+<p><a href="../index.html#policies">Please refer to the course home page.</a></p>
+
+<h2>Submitting Your Lab</h2>
+<p>Push all your files in the <code>python</code> folder inside of the private GitHub repo I created for you.</p>
+<pre>
+# Inside your private GitHub repo folder (e.g., comp23-mchow)
+git add .
+git commit -m "<span class="stress">Some good commit message</span>"
+git push
+</pre>
+
+<h2>Assessment</h2>
+<ol>
+<li><strong>(1 point)</strong> All files are in your private GitHub repo inside a folder named <code>python</code>, including the <code>README</code> file!</li>
+<li><strong>(1 point)</strong> <code>ip_addresses.py</code></li>
+<li><strong>(1 point)</strong> <code>reverselist.py</code></li>
+<li><strong>(2 points)</strong> <code>word_count.py</code></li>
+</ol>
+
+</div>
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+    var pageTracker = _gat._getTracker("UA-582953-7");
+    pageTracker._trackPageview();
+  }
+  catch(err) {}
+</script>
+
+</body>
+</html>
