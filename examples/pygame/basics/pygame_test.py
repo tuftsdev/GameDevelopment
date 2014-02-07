@@ -23,6 +23,9 @@ def input(events):
 # Initialize all imported Pygame modules (a.k.a., get things started)
 pygame.init()
 
+# Enable joystick support
+pygame.joystick.init()
+
 # Set the display's dimensions
 screenDimensions = (800, 600)
 window = pygame.display.set_mode(screenDimensions)
@@ -54,6 +57,19 @@ try:
 except pygame.error, message:
 	pass
 	
+# Detect if joystick is available
+joysticks = pygame.joystick.get_count()
+if joysticks:
+	print str(joysticks) + " joystick(s) detected!"
+
+# Initialize each joystick
+	for i in range(joysticks):
+		joystick = pygame.joystick.Joystick(i)
+		joystick.init()
+		name = joystick.get_name()
+		print "Joystick " + str(i) + " name: " + name
+
 # The game loop
 while True:
 	input(pygame.event.get())
+
