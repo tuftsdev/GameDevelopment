@@ -15,8 +15,10 @@ def input(events):
 			if event.type == KEYDOWN:
 				if event.key == K_ESCAPE:
 					quit()
-				else:
-					print event.key
+				#else:
+				#	print event.key
+			else:
+				print event
 
 # Initialize all imported Pygame modules (a.k.a., get things started)
 pygame.init()
