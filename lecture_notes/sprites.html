@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<link rel="stylesheet" href="../stylesheets/default.css" type="text/css" media="screen" />
+<title>COMP 23: Introduction to Game Development - Sprites and Animation</title>
+</head>
+
+<body>
+<div id="main">
+
+<div id = "header">
+<h1>Introduction to Game Development</h1>
+<h2>Sprites and Animation</h2>
+</div>
+
+<h3>Drawing</h3>
+<ul>
+<li><code>screen.blit()</code></li>
+<li>Change background color or clear the background:
+<ul>
+<li><code>background = pygame.Surface(screen.get_size())</code></li>
+<li><code>background = background.convert()</code></li>
+<li><code>background.fill((255, 0, 0))</code></li>
+<li><code>screen.blit(background, (0, 0))</code></li>
+<li>Or simply do <code>screen.fill()</code></li>
+</ul>
+</li>
+</ul>
+
+<h3>Font and Drawing Strings</h3>
+<ul>
+<li><code>font = pygame.font.Font()</code>.  The constructor takes in a truetype font file or <code>None</code> which will use the default Pygame font, and font size</li>
+<li><code>text = font.render()</code>.  The <code>render()</code> method takes in three arguments: the text string, a flag (0 or 1) to use antialiased text, and RGB color tuple</li>
+<li>Draw the text onto surface via <code>background.blit()</code></li>
+<li>Documentation: <a href="http://www.pygame.org/docs/ref/font.html" target="_blank">http://www.pygame.org/docs/ref/font.html</a></li>
+<li>Example:
+<pre>
+font = pygame.font.Font(None, 28)
+text = font.render("Score: 1000", 1, (0, 0, 0))
+screen.blit(text, (10, 10))
+</pre>
+</li>
+</ul>
+
+<h3>Sound</h3>
+<ul>
+<li><code>sound = pygame.mixer.Sound()</code></li>
+<li>Like images, <code>Sound()</code> takes in one parameter: sound file name</li>
+<li><code>sound.play()</code></li>
+<li>Sound types supported: .ogg, .wav. mp3</li>
+<li>Like images, sounds must be in the same folder as the <code>.py</code> file.  You can also specify path to sound.</li>
+<li>Example:
+<pre>
+boing_sound = pygame.mixer.Sound("boing.wav")
+boing_sound.play()
+</pre>
+</li>
+</ul>
+
+<h3>Exception Handling</h3>
+<ul>
+<li><span class="def">Exception</span> - Errors detected during execution</li>
+<li>What if the image or sound file could not be found?</li>
+<li>In fact if image could not be loaded, your game hangs</li>
+<li><code>try except</code> block</li>
+<li>The equivalent in Java is <code>try catch</code></li>
+<li>Example 1, bad input:
+<pre>
+try:
+  x = int(raw_input("Please enter a number: "))
+  break
+except ValueError:
+  print "Oops!  That was no valid number.  Try again..."
+</pre>
+</li>
+<li>Example 2, the proper way to load an image:
+<pre>
+def load_image(image_name):
+  try:
+    image = pygame.image.load(image_name)
+  except pygame.error, message:
+    print "Cannot load image: " + image_name
+    raise SystemExit, message
+  return image.convert_alpha()
+</pre>
+</li>
+<li>Example 3, the proper way to load a sound:
+<pre>
+def load_sound(sound_name):
+  try:
+    sound = pygame.mixer.Sound(sound_name)
+  except pygame.error, message:
+    print "Cannot load sound: " + sound_name
+    raise SystemExit, message
+  return sound
+</pre>
+</li>
+</ul>
+
+<h3>Sprites</h3>
+<ul>
+<li><span class="def">Sprite</span> - Any object that appears on the screen</li>
+<li>Overlayed on background</li>
+<li>Can be an image or drawing
+<ul>
+<li>Can be motionless (dull)</li>
+<li>Can be animated: move around the screen randomly</li>
+<li>Even better: can respond to the environment</li>
+</ul>
+</li>
+<li>Hopefully, your sprite images have transparent pixels</li>
+<li>We have already did most of the work for creating a sprite.  Relatively easy:
+<ul>
+<li>Keep track of the <code>x</code> and <code>y</code> coordinates</li>
+<li>Images should be optimized (with transparent background)</li>
+<li>Draw the sprite</li>
+<li>Update the sprite (e.g., coordinates, speed)</li>
+<li>Keep track of it's state (e.g., hidden/shown)</li>
+</ul>
+</li>
+</ul>
+
+<h3>Pygame's Sprite Class</h3>
+<ul>
+<li>Base class</li>
+<li>Documentation: <a href="http://www.pygame.org/docs/ref/sprite.html" target="_blank">http://www.pygame.org/docs/ref/sprite.html</a></li>
+<li>All sprites <span class="stress">must</span> have an <code>update()</code> method and a <code>draw()</code> method. These function is typically called once per frame!</li>
+<li>Several different kind of sprite classes: <code>pygame.sprite.Sprite</code> (simple) <code>pygame.sprite.DirtySprite</code> (advanced)</li>
+<li>Very lightweight</li>
+<li>Contains collision detection methods (more later)</li>
+<li>To use the <code>pygame.sprite.Sprite</code> base class:
+<pre>
+class MySprite(pygame.sprite.Sprite):
+  def __init__(self):
+    pygame.sprite.Sprite.__init__(self) #call Sprite intializer
+  ...
+  ...
+  ...
+</pre>
+</li>
+</ul>
+
+<h3>Example: <code>SimpleSprite</code></h3>
+<pre>
+class SimpleSprite(pygame.sprite.Sprite):
+  ''' A simple sprite that bounces off the walls '''
+  
+  def load_image(self, image_name):
+    ''' The proper way to load an image '''
+    try:
+      image = pygame.image.load(image_name)
+    except pygame.error, message:
+      print "Cannot load image: " + image_name
+      raise SystemExit, message
+    return image.convert_alpha()
+
+  def __init__(self, screen, img_filename, init_x, init_y, init_x_speed, init_y_speed):
+    ''' Remember to pass the surface to the sprite for updating and drawing! '''
+    pygame.sprite.Sprite.__init__(self) #call Sprite intializer
+    self.screen = screen
+    
+    # Load the image
+    self.image = self.load_image(img_filename)
+    self.rect = self.image.get_rect() # Set the rect attribute for the sprite (absolutely necessary for collision detection)
+
+    # Get the image's width and height
+    self.image_w, self.image_h = self.image.get_size()
+        
+    # Set the (x, y)
+    self.x = init_x
+    self.y = init_y
+    
+    # Set the default speed (dx, dy)
+    self.dx = init_x_speed
+    self.dy = init_y_speed
+        
+  def update(self):
+    ''' Move the sprite; bounce off the walls '''
+    if ((self.x + self.dx) &lt;= 0):
+      self.dx = self.dx * -1
+    if ((self.x + self.dx) &gt;= self.screen.get_size()[0]):
+      self.dx = self.dx * -1
+    if ((self.y + self.dy) &lt;= 0):
+      self.dy = self.dy * -1
+    if ((self.y + self.dy) &gt;= self.screen.get_size()[1]):
+      self.dy = self.dy * -1
+    self.x = self.x + self.dx
+    self.y = self.y + self.dy
+  
+  def draw(self):
+    ''' Draw the sprite on the screen '''
+    draw_pos = self.image.get_rect().move(self.x - self.image_w / 2, self.y - self.image_h / 2)
+    self.screen.blit(self.image, draw_pos)
+</pre>
+
+<h3>Handling Frames Per Second (FPS)</h3>
+<ul>
+<li>A frame is one pass through the update-render-sleep loop</li>
+<li>Theoretically, the loop's execution speed should be about the same on all platforms
+<ul>
+<li>On a slow machine =&gt; too slow =&gt; unplayable game</li>
+<li>On a fast machine =&gt; too fast =&gt; unplayable game</li>
+</ul>
+</li>
+<li>Compute the estimated required delay between frames based on the current time.  Keep track of the starting time.</li>
+<li>There are many ways to optimize the FPS and thread sleeping times</li>
+<li>The rule of thumb is that anything 30 updates per second or faster is good enough and looks smooth to the average person</li>
+</ul>
+
+<h3>The Timer in Pygame</h3>
+<ul>
+<li>Times in pygame are represented in milliseconds (1/1000 seconds)</li>
+<li><code>clock = pygame.time.Clock()</code></li>
+<li><code>clock.tick()</code>.  This is to be called once per frame.  Important: the required parameter to <code>tick()</code> function is a framerate!</li>
+<li>Example (30 FPS):
+<pre>
+clock = pygame.time.Clock()
+clock.tick(30)
+</pre>
+</li>
+</ul>
+
+<h3>Question: How Do You Animate A Sprite?</h3>
+<!--<ul>
+<li>The easy way but not terribly efficient: individual images for frames</li>
+<li>The efficient way: sprite sheet</li>
+</ul>-->
+
+
+</div>
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+    var pageTracker = _gat._getTracker("UA-582953-7");
+    pageTracker._trackPageview();
+  }
+  catch(err) {}
+</script>
+
+</body>
+</html>
