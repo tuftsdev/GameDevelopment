@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<link rel="stylesheet" href="../stylesheets/default.css" type="text/css" media="screen" />
+<title>COMP 23: Introduction to Game Development - Lab 2</title>
+</head>
+
+<body>
+<div id="main">
+
+<div id = "header">
+<h1>Introduction to Game Development</h1>
+<h2>Lab 3: The Battle for Ram Aras, Part I</h2>
+</div>
+
+<h4 class="note">This lab is worth 9 points</h4>
+
+<h2>Objectives</h2>
+<p>In this lab, you will practice:</p>
+<ol>
+<li>Using PyGame</li>
+<li>Implementing two Python modules that are game sprites</li>
+<li>Loading images with exception handling</li>
+<li>Using an event queue to handle keyboard events</li>
+</ol>
+
+<h2>Overview</h2>
+<p>For the next two weeks, we will develop a small game titled <span class="title">The Battle for Ram Aras</span> using PyGame.  This is a 2D space shooter game where the goal is to save the planet Ram Aras from invaders.  This week, we will implement the star of the game: a laser-shooting battlecruiser.</p>
+
+<h2>Instructions</h2>
+<p>You will implement two sprites for the game as Python / Pygame modules: the battlecruiser (<code>Battlecruiser.py</code>) and the laser (<code>Laser.py</code>).</p>
+
+<h2>Getting Started</h2>
+<ol>
+<li>Inside the same folder that you used for the <a href="lab-python.html">previous Python lab</a> on your computer that is also your private GitHub repo (i.e., <code>comp23-username</code>), create a new folder named <code>battle</code>.</li>
+<li>Download the file <code><a href="assets.zip">assets.zip</a></code> into the <code>battle</code> folder that you just created.</li>
+<li>Unzip the ZIP file.  A folder <code>assets</code> with image and audio files for the game will be created.</li>
+<li>Remove the ZIP file <code>assets.zip</code></li>
+<li>Run <code>git add .</code></li>
+<li>Run <code>git commit -m "Starting to make new game: Battle for Rams Aras"</code></li>
+<li>Run <code>git push</code></li>
+</ol>
+
+<h2>Specifications and Controls</h2>
+<ul>
+<li>Both the <code>Battlecruiser</code> and <code>Laser</code> Python classes shall be subclasses of <code>pygame.sprite.Sprite</code></li>
+<li>The <code>Battlecruiser</code> sprite shall use the asset <code>battlecruiser.gif</code></li>
+<li>The <code>Laser</code> sprite shall use the asset <code>laser.gif</code></li>
+<li>Both sprite classes shall load the asset with exception handling</li>
+<li>Both sprite classes shall have a class constructor</li>
+<li>Both sprite classes shall have and maintain the following member variables:
+<ol>
+<li><code>x</code> (already provided by PyGame's Sprite classes)</li>
+<li><code>y</code> (already provided by PyGame's Sprite classes)</li>
+<li><code>dx</code> (already provided by PyGame's Sprite classes)</li>
+<li><code>dy</code> (already provided by PyGame's Sprite classes)</li>
+<li><code>screen</code> (a copy of the drawing surface)</li>
+<li><code>image</code></li>
+<li><code>image_w</code> (image width)</li>
+<li><code>image_h</code> (image height)</li>
+<li><code>rect</code> (a "moving collision box")</li>
+<li><code>active</code> (a boolean)</li>
+</ol>
+</li>
+<li>Both sprite classes shall have a method named <code>update</code></li>
+<li>Both sprite classes shall have a method named <code>draw</code></li>
+<li>You are free to use additional member variables for each of the sprite classes (e.g., perhaps firing speed and cooldown for the battlecruiser)</li>
+<li>Both sprite classes shall run using 50 frames-per-second</li>
+<li>The controls for the battlecruiser:
+<ul>
+<li>LEFT ARROW: Moves the battlecruiser to the left of the screen (in the x-direction)</li>
+<li>RIGHT ARROW: Moves the battlecruiser to the right of the screen (in the x-direction)</li>
+<li>UP ARROW: Moves the battlecruiser up the screen (in the y-direction)</li>
+<li>DOWN ARROW: Moves the battlecruiser down the screen (in the y-direction)</li>
+<li>SPACE BAR: Fires a laser.  <span class="note">Important: the battlecruiser can fire multiple lasers.  That is, more than one laser can be drawn on one frame!</span></li>
+<li>ESC: Quit</li>
+</ul>
+</li>
+<li>Running the laser module via <code>python Laser.py</code> shall launch a 800x600 window with a black background, with a barrage of lasers randomly going from down the screen to up.</li>
+<li>Running the battlecruiser module via <code>python Battlecruiser.py</code> shall launch a 800x600 window with a black background, allowing you to control the battlecruiser with the controls as noted above.</li>
+</ul>
+
+<h2>Hints</h2>
+<ul>
+<li>It would be wise to maintain a list of fired lasers in the battlecruiser class!</li>
+</ul>
+
+<h2>Submitting Your Lab</h2>
+<p>Push all your files in the <code>battle</code> folder inside of the private GitHub repo I created for you.</p>
+<pre>
+# Inside your private GitHub repo folder (e.g., comp23-mchow)
+git add .
+git commit -m "<span class="stress">Some good commit message</span>"
+git push
+</pre>
+
+<h2>Assessment</h2>
+<ol>
+<li><strong>(1 point)</strong> All files are in your private GitHub repo inside a folder named <code>battle</code>, including the <code>README</code> file!</li>
+<li><strong>(4 points)</strong> <code>Battlecruiser.py</code></li>
+<li><strong>(4 points)</strong> <code>Laser.py</code></li>
+</ol>
+
+</div>
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+    var pageTracker = _gat._getTracker("UA-582953-7");
+    pageTracker._trackPageview();
+  }
+  catch(err) {}
+</script>
+
+</body>
+</html>
