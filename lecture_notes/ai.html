@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<link rel="stylesheet" href="../stylesheets/default.css" type="text/css" media="screen" />
+<title>COMP 23: Introduction to Game Development - Artificial Intelligence</title>
+</head>
+
+<body>
+<div id="main">
+
+<div id = "header">
+<h1>Introduction to Game Development</h1>
+<h2>Artificial Intelligence</h2>
+</div>
+
+<h3>What is AI?</h3>
+<ul>
+<li>The study of computational systems that "exhibit intelligence"</li>
+<li>Capabilities: problem solving, planning, and learning</li>
+<li>Practices: studying behavior and processing (human, rational, and cognitive), machine learning, searching, optimization, knowledge bases</li>
+</ul>
+
+<h3>AI in Games</h3>
+<ul>
+<li>Opponents (e.g., how can they outsmart you?)</li>
+<li>Teammates</li>
+<li>Support characters</li>
+<li>Autonomous characters</li>
+<li>Commentators</li>
+<li>Camera control</li>
+<li>Plot</li>
+<li>Programming usually done in LISP or PROLOG languages</li>
+<li>In short: essential to the modeled world</li>
+<li>Goals of AI in games:
+<ul>
+<li>Provide challenging opponents...</li>
+<li>...but not too challenging or too predictable</li>
+<li>Gather enough knowledge...</li>
+<li>...but aim for low CPU and memory usage</li>
+<li>Provide a perception of reality (e.g., human characteristics)</li>
+<li>Conflicting goals eh?</li>
+</ul>
+</li>
+</ul>
+
+<h3>Effects of Bad AI (duh!)</h3>
+<ul>
+<li>Reduced fun</li>
+<li>Extreme behaviors (from lame to superhuman)</li>
+<li>Unrealistic behaviors</li>
+<li>Mindless hordes (of opponents)</li>
+<li>Cheating</li>
+</ul>
+
+<h3>Sample Problems</h3>
+<ul>
+<li>What to do when the enemy is heard or sensed?</li>
+<li>What to do when my health level is low?</li>
+<li>What to do if don't see or hear anything?</li>
+<li>How to move from point A to the goal in a maze?</li>
+<li>Identify a good day for a round of golf</li>
+<li>How to move a flock of objects (e.g., birds)?</li>
+</ul>
+
+<h3>Decision-Making Techniques</h3>
+<ul>
+<li>Finite State Machines</li>
+<li>Search</li>
+<li>Path-Finding</li>
+<li>Decision Trees</li>
+<li>Neural Networks</li>
+<li>Genetic Algorithms</li>
+<li>Fuzzy Logic</li>
+<li>and many more...</li>
+</ul>
+
+<h3>Building an AI Agent</h3>
+<ul>
+<li>Given: the environment</li>
+<li>Cycle:
+<ul>
+<li>Sense - Gather information about the environment</li>
+<li>Think - Use one of the decision-making techniques above</li>
+<li>Act - Execute based on your decision</li>
+<li>Repeat steps</li>
+</ul>
+</li>
+<li>Share global data each agent structures and maps</li>
+<li>Each time through game loop, "tick" each agent</li>
+<li>Constraints:
+<ul>
+<li>Memory: what to remember and for how long?</li>
+<li>Obstacles (can be anything)</li>
+<li>Complex and differing structures and sources in your game (e.g., sound, vision, etc)</li>
+<li>Knowledge intensive</li>
+<li>CPU usage</li>
+</ul>
+</li>
+</ul>
+
+<h3>Finite State Machines (FSM)</h3>
+<ul>
+<li>Simplest of AI engines (and to understand)</li>
+<li>Almost exactly like the state diagrams in game design documents</li>
+<li>A state has <span class="stress">behavior</span> and <span class="stress">trigger</span></li>
+<li>Strengths:
+<ul>
+<li>Simple, quick, sufficient</li>
+<li>Tools available for non-programmers</li>
+<li>Can be compacted into a simple data structure, including an array</li>
+</ul>
+</li>
+<li>Weaknesses: number of states can grow very fast (alas, best to keep it simple)</li>
+<li>FSM Example: Quake II
+<ul>
+<li>9 different states:
+<ul>
+<li>Standing</li>
+<li>Walking</li>
+<li>Running</li>
+<li>Dodging</li>
+<li>Attaching</li>
+<li>Melee</li>
+<li>See the enemy</li>
+<li>Idle</li>
+<li>Searching</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<h3>A*</h3>
+<ul>
+<li>Path finding algorithm</li>
+<li>The idea: want to go from point A to point B; keep track of the cost from getting from point to point; will get the <span class="stress">least</span> cost to get from point A to point B</li>
+<li>Strengths:
+<ul>
+<li>Popularity</li>
+<li>Very configurable for different game types and maps</li>
+</ul>
+</li>
+<li>Weaknesses:
+<ul>
+<li>Memory-hungry (i.e., lots of thinking)</li>
+<li>Very slow on rough terrains</li>
+<li>Largely inefficient for real-time robotics</li>
+</ul>
+</li>
+<li>(Java) implementation and example: <a href="http://www.cokeandcode.com/main/tutorials/path-finding/" target="_blank">http://www.cokeandcode.com/main/tutorials/path-finding/</a></li>
+</ul>
+
+<h3>Minimax Trees</h3>
+<ul>
+<li>The idea: look ahead, predicting what the opponent might do</li>
+<li><span class="stress">Mini</span> and <span class="stress">max</span> - "minimize the opponents' maximum move</li>
+<li>One input: depth</li>
+<li>Recursive</li>
+<li>For even a simple game, a tree can have a million nodes (impossible to analyze the whole board)</li>
+<li>Helper functions:
+<ul>
+<li><span class="stress">Move generator</span> - determine what moves are possible</li>
+<li><span class="stress">Static evaluator</span> - Figure out how good each move is, based on changes in board position</li>
+</ul>
+</li>
+<li>Guess what board game uses this algorithm?</li>
+</ul>
+
+<h3>AI References</h3>
+<ul>
+<li><a href="http://www.generation5.org/content/2000/app_game.asp" target="_blank">http://www.generation5.org/content/2000/app_game.asp</a></li>
+<li><a href="http://www.cs.northwestern.edu/~forbus/c95-gd/lectures/Game_AI_Introduction.pdf" target="_blank">http://www.cs.northwestern.edu/~forbus/c95-gd/lectures/Game_AI_Introduction.pdf</a></li>
+<li><a href="http://www.bit-tech.net/gaming/2009/03/05/how-ai-in-games-works/1" target="_blank">http://www.bit-tech.net/gaming/2009/03/05/how-ai-in-games-works/1</a></li>
+</ul>
+
+</div>
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+    var pageTracker = _gat._getTracker("UA-582953-7");
+    pageTracker._trackPageview();
+  }
+  catch(err) {}
+</script>
+
+</body>
+</html>
