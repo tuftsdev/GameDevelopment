@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<link rel="stylesheet" href="../stylesheets/default.css" type="text/css" media="screen" />
+<title>COMP 23: Introduction to Game Development - Ethics, MMORPGs, and Securing Online Games</title>
+</head>
+
+<body>
+<div id="main">
+
+<div id = "header">
+<h1>Introduction to Game Development</h1>
+<h2>Ethics, MMORPGs, and Securing Online Games</h2>
+</div>
+
+<h3>Ethics in Gaming</h3>
+<ul>
+<li>Why do we cheat?</li>
+<li>Why do we break things?</li>
+<li>How do game companies protect their intellectual property?</li>
+<li>The stakes are extraordinarily high, especially with MMORPGs.  Why?
+<ul>
+<li>MMORPGs have pushed the limits computing and gaming</li>
+<li>Over 12,000,000 players worldwide; 500,000 users simultaneously on 6 continents</li>
+<li>Over 8,000,000 players for <span class="title">World of Warcraft</span> alone.  Do the math: $14 (subscription) * 8M = 112M * 12 (annually) = $1.344B / year.  This does not include the client or add-ons!</li>
+</ul>
+</li>
+</ul>
+
+<h3>What We Will Not Talk About</h3>
+<ul>
+<li>Consoles and console games</li>
+</ul>
+
+<h3>Requirements of an Online Game</h3>
+<ul>
+<li>Basic software architecture
+<ol>
+<li>Create a new character</li>
+<li>Save that character (server side)</li>
+<li>Log in with the character</li>
+<li>Be able to chat with others</li>
+<li>Be able to navigate around in 3D</li>
+</ol>
+</li>
+<li>Database: revisit flat file vs. RDBMS</li>
+<li>Some protocol for data transmission</li>
+<li>The game server and the game client</li>
+<li>Security --what did we learn today?</li>
+<li><span class="stress">Bandwidth</span></li>
+<li><span class="stress">$$$$</span></li>
+</ul>
+
+<h3>Designing an MMORPG</h3>
+<ul>
+<li>One (fantasy) world with many (fantasy) characters</li>
+<li>Deployed on a client-server architecture</li>
+<li>Need to use all computing resources to the fullest</li>
+<li>Computing power (including bandwidth) is NOT unlimited.  You CANNOT have a dynamic world</li>
+</ul>
+
+<h3>Anatomy of an MMORPG, by Jon Radoff</h3>
+<ul>
+<li>Jon Radoff, founder of <a href="http://www.gamerdna.com/" target="_blank">GamerDNA</a> based in Cambridge, MA</li>
+<li>"An MMORPG is like a large piece of enterprise software: one consists of databases, specialized servers, client software and a huge amount of content."</li>
+<li>Anatomy:
+<ul>
+<li><img src="http://radoff.com/images/MMOAnatomy5.gif" alt="Anatomy" /></li>
+</ul>
+</li>
+<li>Disclosed: over 1900 servers required for <span class="title">World of Warcraft</span>!
+<ul>
+<li>I believe the following image is a server farm for <span class="title">EverQuest</span>:</li>
+<li><img src="http://radoff.com/images/MMOAnatomy4.gif" alt="Server farm" /></li>
+</ul>
+</li>
+<li>Read more at: <a href="http://radoff.com/blog/2008/08/22/anatomy-of-an-mmorpg/" target="_blank">http://radoff.com/blog/2008/08/22/anatomy-of-an-mmorpg/</a></li>
+</ul>
+
+<h3>What Has Changed Over the Years</h3>
+<ul>
+<li>Fewer custom graphics and game engine</li>
+<li>Middleware standardization</li>
+<li>Online presence required for most games</li>
+<li>Content distribution platforms such as Steam</li>
+<li>More content protection necessary</li>
+<li>Patch / update-hell</li>
+<li>Custom content automatically downloaded into game</li>
+<li>"I know what you did..." / "I can see what you play!"</li>
+<li>A lot more personal information stored on computers</li>
+<li>Plethora of online communities</li>
+</ul>
+
+<h3>What Has Not Changed Over the Years</h3>
+<ul>
+<li>"Pretty sells"</li>
+<li>Piracy</li>
+<li>Players still look for hacks and cracks</li>
+<li>Game developers, especially at major studios, are constantly under severe time pressure.  The worst time of the year?</li>
+<li>Testing is still "a low-hanging fruit"</li>
+</ul>
+
+<h3>Game Hacking 101</h3>
+<ul>
+<li>Shady?  It can be.</li>
+<li>ROM hacking</li>
+<li>Console modding</li>
+<li>Modding characters and levels (this can be perfectly legal)</li>
+<li>Game server manipulation</li>
+<li>Lurking: predictability and randomness</li>
+</ul>
+
+<h3>Why Are Online Games So Vulnerable?</h3>
+<ul>
+<li>Lot of money to be made!</li>
+<li>The "trinity of trouble:" connectivity, complexity, and extensibility
+<ul>
+<li>Networking</li>
+<li>Game engines (building games on top of other people's work, can you trust other people's work)</li>
+<li>Scripting engines</li>
+</ul>
+</li>
+<li>Legal issues are uncharted territory</li>
+<li>Mass-market appeal</li>
+<li>Homogenization</li>
+<li>Typically, games are patched, not the game <span class="stress">engines</span>!</li>
+<li>One exploit can potentially give bad guy access to your entire PC
+<ul>
+<li>Personal information</li>
+<li>Payment information</li>
+<li>Virtual assets</li>
+</ul>
+</li>
+<li>Social engineering</li>
+</ul>
+
+<h3>Random Numbers</h3>
+<ul>
+<li>Critical for games that require randomness (e.g., any gambling games including Poker and Blackjack)</li>
+<li>Example: <code>java.util.Random</code> (Java) and <code>random</code> (Python) are <span class="stress">insecure</span> =&gt; predictable based on time</li>
+<li>Generating secure random numbers in Java: <code>java.security.SecureRandom</code> - provides a cryptographically strong pseudo-random number generator (PRNG)</li>
+<li>An analysis on how to cheat in online poker (from Cigital, Inc.): <a href="http://www.cigital.com/papers/download/developer_gambling.php" target="_blank">http://www.cigital.com/papers/download/developer_gambling.php</a></li>
+<li>More reading:
+<ul>
+<li><a href="http://www.cigital.com/justiceleague/2009/08/14/proper-use-of-javas-securerandom/" target="_blank">Proper Use of Java's SecureRandom (from Cigital, Inc.)</a></li>
+<li><a href="http://www.pokerstars.com/poker/rng/" target="_blank">PokerStars Random Number Generator (RNG)</a></li>
+</ul>
+</li>
+</ul>
+
+<h3>Lawyers</h3>
+<ul>
+<li>Piracy and privacy</li>
+<li>End Use License Agreements (EULA) hell.  Do you know what you are agreeing to?  Are you waiving some individual rights way?</li>
+<li>EULAs also govern your virtual-property rights</li>
+<li>The terms of use hell (a.k.a., how to get banned)</li>
+<li>Please note, advertising of commercial services and the sale or purchase of in-game items is specifically prohibited by the WoW EULA, similar to the restriction on using bot programs.</li>
+<li>Lawsuits have been filed by Blizzard (and they have won)</li>
+<li>Companies that advertise and sell virtual goods can also be sued for illegal spamming under the US Computer Fraud and Abuse Act.  See "Blizzard vs. In Game Dollar"</li>
+<li>Digital Millennium Copyright Act of 1998 and the Induce Act (prohibits reverse engineering of software)</li>
+<li>Spyware and rootkits (now we are getting really "low")
+<ul>
+<li>Example: "The Warden" in <span class="title">World of Warcraft</span>
+<ul>
+<li>The point: combat cheating</li>
+<li>Reads all sorts of data from the gamer's PC, including the title bar of every window open, running processes, URLs, etc.</li>
+<li>Runs about every 15 seconds; sends information back to Blizzard</li>
+<li>The Governor, written by Greg Hoglund - A program that identifies what exactly the Warden is doing.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Are virtual properties taxable?</li>
+</ul>
+
+<h3>Virtual Economies</h3>
+<ul>
+<li>Exchange rates exist between in-game currency and real money.  Visit <a href="http://www.ige.com/" target="_blank">Internet Gaming Entertainment (IGE)</a></li>
+<li>Currently, the market is over $6B</li>
+<li>In October 2005 a player paid $100,000 for the "Asteroid Space Resort" in Project Entropia (now Entropia Universe)</li>
+<li>Gold farming, particularly in China:
+<ul>
+<li>Sweatshops</li>
+<li>Laborers work extremely long hours doing mundane game tasks, and sometimes even run bots</li>
+<li>Better than working on a state-owned farm, and easier than making shoes!</li>
+<li>Video: <a href="http://youtube.com/watch?v=ho5Yxe6UVv4" target="_blank">http://youtube.com/watch?v=ho5Yxe6UVv4</a></li>
+</ul>
+</li>
+<li>Revenue is in real money!</li>
+<li>User base is huge target for malware</li>
+</ul>
+
+<h3>Malware and Exploits</h3>
+<ul>
+<li>Account stealers such as <code>Win32/Taterf</code></li>
+<li>Browser exploits through community sites</li>
+<li>Unofficial patches and tools (e.g., no-CD cracks, trainers, nude patches)</li>
+<li>Example (custom content):
+<ol>
+<li>New character with script code.  WTF?</li>
+<li>The script is executed with game permissions, i.e., as administrator or root</li>
+<li>What the script does: use your wildest imagination because the administrator can do anything to the system!</li>
+</ol>
+</li>
+<li>Adobe Flash exploits via community websites and message boards.  <span class="stress">All your base are belong to us.</span></li>
+</ul>
+
+<h3>Advanced Gaming Hack-Fu</h3>
+<ul>
+<li>Taking advantage of time-and-state errors galore =&gt; respawning</li>
+<li>Gold duplication</li>
+<li>Macros</li>
+<li>Scripting (for better or worse)</li>
+<li>Bots</li>
+<li>Reverse engineering the client: break it apart =&gt; find any software bugs and flaws =&gt; perhaps even fix the user interface =&gt; take advantage of what you find</li>
+<li>Manipulating memory</li>
+<li>Manipulating graphical rendering information</li>
+<li>Injecting new code into the client via DLL injection</li>
+<li>For online games, read all the packets via sniffer or proxy</li>
+</ul>
+
+<h3>Example 1: Full Compromise via QuickTime Vulnerability and <span class="title">Second Life</span></h3>
+<ul>
+<li>Developed by researchers Charlie Miller and Dino Dai Zovi</li>
+<li>Compromise the host machine of any player whose avatar approaches an in-game object embedded with malicious multimedia content</li>
+<li>First, attacker creates a virtual object somewhere on his or her property and then associates a URL with the virtual object, indicating that a multimedia file is to be presented when this object is encountered.</li>
+<li>When a vulnerable player's avatar encounters this object in the virtual world, the malicious payload (from the multimedia content) is automatically downloaded, processed by the underlying QuickTime library, and the host machine is completely compromised.</li>
+</ul>
+
+<h3>Example 2: Exploiting In-Game Communication in <span class="title">Anarchy Online</span></h3>
+<ul>
+<li><code>/../../../../Users/&lt;user&gt;/Desktop/ fun_script</code></li>
+</ul>
+
+<h3>Conclusion and Questions</h3>
+<ul>
+<li>Online games are ripe and juicy targets for good reasons</li>
+<li>Games now have mass-market appeal</li>
+<li>The architecture of online games is very complex</li>
+<li>Too many dependencies in online games and also in the communities supporting the games</li>
+<li>A lot at stake</li>
+<li>Lots of uncharted territories and even no man's lands</li>
+<li>Cheating isn't going away, and methods are becoming more sophisticated</li>
+<li>Game developers and players need to be more security-conscious and educated</li>
+<li>Risk assessments necessary</li>
+<li>Very viable area of research</li>
+<li>What is your favorite game hack?</li>
+<li>What is your solution to reduce the vulnerabilities and exploits in online games?</li>
+</ul>
+
+</div>
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+    var pageTracker = _gat._getTracker("UA-582953-7");
+    pageTracker._trackPageview();
+  }
+  catch(err) {}
+</script>
+
+</body>
+</html>
