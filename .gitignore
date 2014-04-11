@@ -29,6 +29,10 @@ ehthumbs.db
 Thumbs.db
 *~
 
+# Binaries
+*.exe
+*.jar
+
 # Rails specific #
 ##################
 *.rbc
