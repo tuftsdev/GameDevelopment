@@ -1,336 +1,218 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-        <link rel="stylesheet" href="stylesheets/default.css" type="text/css" />
-        <title>COMP 23: Introduction to Game Development</title>
-    </head>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1"/>
+<link rel="stylesheet" href="style.css" />
+<title>COMP 23: Introduction to Game Development</title>
+</head>
 
-    <body>
-        <div id="main">
+<body>
+<h1>Introduction to Game Development</h1>
+<h2>COMP 23, Tufts University Department of Computer Science, Fall 2015</h2>
 
-            <div id = "header">
-                <h1>Introduction to Game Development</h1>
-                <h2>COMP 23, Tufts University Department of Computer Science, Spring 2014</h2>
-            </div>
+<h2>Instructor</h2>
+<ul>
+<li>Ming Chow, <a href="mailto:mchow@cs.tufts.edu">mchow@cs.tufts.edu</a></li>
+<li>Office Hours: Wednesdays from 1 - 4 PM, or by appointment, "in my usual spot".  Hours are good until the last day of classes, December 11th.</li>
+<li>Please send all class questions (e.g., help on assignments and labs) <a href="https://piazza.com/tufts/fall2015/comp23/home" target="_blank">via Piazza</a>. DO NOT E-MAIL ME! Sign up at <a href="https://piazza.com/tufts/fall2015/comp23" target="_blank">https://piazza.com/tufts/fall2015/comp23</a>.</li>
+<li>For emergencies or private matters, please e-mail or see me directly.</li>
+</ul>
 
-            <h2>About This Course</h2>
-            <ul>
-                <li><a href="history/index.html">The History</a></li>
-                <li><a href="http://www.prism-magazine.org/summer11/feature_01.cfm" target="_blank">The Accolade</a></li>
-                <li><a href="http://ocw.tufts.edu/Schools/8">The Contribution</a></li>
-            </ul>
+<h2>Teaching Assistant</h2>
+<ul>
+<li>Arthur Berman</li>
+</ul>
 
-            <h2>Instructor</h2>
-            <ul>
-                <li>Ming Chow, <a href="mailto:mchow@cs.tufts.edu">mchow@cs.tufts.edu</a></li>
-                <li>Office Hours: Tuesdays and Thursdays from 2 - 3 PM, Wednesdays from 2 - 4 PM in Halligan 228A (hours are good until the last day of classes, April 28th)</li>
-                <li>Please send all class questions <a href="https://piazza.com/tufts/spring2014/comp23/home" target="_blank">via Piazza</a>. DO NOT E-MAIL ME! Sign up at <a href="https://piazza.com/tufts/spring2014/comp23" target="_blank">https://piazza.com/tufts/spring2014/comp23</a>.</li>
-                <li>For emergencies or private matters, please e-mail or see me directly.</li>
-            </ul>
+<h2>Class Time and Location</h2>
+<ul>
+<li>Tuesdays and Thursdays, 12:00 - 1:15 PM in Halligan 111B</li>
+</ul>
 
-            <h2>Class Time and Location</h2>
-            <ul>
-                <li>Tuesdays and Thursdays, 4:30 - 5:45 PM in Bromfield-Pearson 007</li>
-            </ul>
+<h2>Prerequisites</h2>
+<ul>
+<li>COMP 15: Data Structures</li>
+</ul>
 
-            <h2>Teaching Assistants</h2>
-            <ul>
-                <li>Sam Dushay. Office Hours: Mondays 5:30 - 7:30 PM and Wednesdays 4:30 - 6:30 PM in the collaborative workspace on the second floor of Halligan Hall.</li>
-            </ul>
+<h2>Textbook</h2>
+<ul>
+<li>None</li>
+</ul>
 
-            <h2>Textbook</h2>
-            <ul>
-                <li>None</li>
-            </ul>
+<h2 id="syllabus">Syllabus</h2>
 
-            <h2>Software Requirements (on your personal computer)</h2>
-            <ul>
-                <li><a href="http://www.eecs.tufts.edu/vmap" target="_blank">VMware Workstation (for Windows and Linux) or VMware Fusion (for Mac OS X)</a></li>
-                <li>The virtual machine for this class: <a href="http://www.cs.tufts.edu/comp/23/Ubuntu.zip">Ubuntu.zip</a> (MD5 checksum = <code>536db47b103e84b350dd041a995019fa</code>; username is <code>defcon</code>, password is <code>!templinuxpw!</code>). This virtual machine is fully-loaded, includes Git, Python, PyGame, Gimp, etc.</li>
-            </ul>
+<p class="note">Schedule is subject to change.</p>
 
-            <h2>Prerequisite</h2>
-            <ul>
-                <li>COMP 15</li>
-            </ul>
+<p>Topics:</p>
+<ul>
+<li>History of Computer and Video Games</li>
+<li>Game Design Principles</li>
+<li>Game Development Methodologies</li>
+<li>Sprites and Animation</li>
+<li>Physics</li>
+<li>Audio, Sound, and Music</li>
+<li>Storytelling</li>
+<li>Artificial Intelligence</li>
+<li>Game Testing</li>
+<li>Ethics, MMORPGs, and Securing Online Games</li>
+<li>Mobile Games</li>
+<li>Networking</li>
+</ul>
 
-            <h2>Syllabus and Lectures</h2>
+<table>
+<tr>
+<th>Date</th>
+<th>Agenda</th>
+<th>Deliverables</th>
+</tr>
+<tr>
+<td>Tuesday, September 8th</td>
+<td>Course Introduction</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Thursday, September 10th</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Tuesday, September 15th</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Thursday, September 17th</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Tuesday, September 22nd</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Thursday, September 24th</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Tuesday, September 29th</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Thursday, October 1st</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Tuesday, October 6th</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Thursday, October 8th</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Tuesday, October 13th</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Thursday, October 15th</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Tuesday, October 20th</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Thursday, October 22nd</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Tuesday, October 27th</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Thursday, October 29th</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Tuesday, November 3rd</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Thursday, November 5th</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Thursday, November 12th</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Tuesday, November 17th</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Thursday, November 19th</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Tuesday, November 24th</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Tuesday, December 1st</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Thursday, December 3rd</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Tuesday, December 8th</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Thursday, December 10th</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
 
-            <table>
-                <tr>
-                    <th>Date</th>
-                    <th>Agenda</th>
-                    <th>Deliverables</th>
-                </tr>
+<h2 id="policy">Course Policies</h2>
 
-                <tr>
-                    <td>Thursday, January 16th</td>
-                    <td>
-                        <ul>
-                            <li><a href="lecture_notes/intro.html">Course Introduction</a></li>
-                            <li><a href="http://www.massdigi.org/gamechallenge/">2014 MassDiGI Game Challenge</a></li>
-                        </ul>
-                    </td>
-                    <td><a href="https://docs.google.com/forms/d/16DK1RdbnDzc91WfvquZctHJXyfbDEvtcY1CKIds_yx4/viewform" target="_blank">Lab 1: Course Roster</a></td>
-                </tr>
+<h3>Assignment Late Policy</h3>
+<p>Assignments (labs, homework) that is submitted electronically (most homework) are due at 11:59 PM on a Tuesday or Thursday. We will grant an automatic extension of ten minutes at no cost to you. If you plan on submitting your work at midnight or at six, you will have nine minutes for last-minute changes.</p>
+<p>An assignment is expected to be submitted on time. However, we recognize that the exigencies of college life occasionally interfere with on-time submission. If you have difficulty getting the assignment in on time, you have two options:</p>
+<ol>
+<li>For ordinary difficulties, each student is automatically issued three (3) "extension tokens." By expending an extension token, you can get an automatic 24-hour extension on all deadlines associated with a single assignment.  To use an extension token, you must e-mail me at <code>mchow@cs.tufts.edu</code>. Thus must be sent before the assignment is due.  At most two extension tokens may be expended on any single assignment.  When you are out of tokens, late assignments will no longer be accepted: it will be returned ungraded, and you will receive no credit for the work.</li>
+<li>If a serious illness affects your ability to complete the assignment on time, your first step is to report the illness using the "Illness Notification Form" that is available in WebCenter for Students. We will make suitable arrangements. For extraordinary difficulties, such as bereavement, family emergencies, or other extraordinary unpleasant events, your first step should be to make contact with your associate dean for undergraduate education. You must take this step before the assignment is due. Ask your dean to drop me an email or give me a call, and we will make special arrangements that are suited to your circumstances.</li>
+</ol>
+<p>Please understand that extension tokens are meant to be used.  That is, you will not receive any special bonus at the end of the course if you do not use any of your extension tokens.</p>
 
-                <tr>
-                    <td>Tuesday, January 21st</td>
-                    <td><a href="lecture_notes/history.txt">History of Computer and Video Games</a></td>
-                    <td><a href="https://docs.google.com/forms/d/18J1zf88GpMSlTPFfTuLB5d0ydiOFC_cpoxkUU6hLWhw/viewform" target="_blank">Assignment 1: Hall of Fame Game and Hall of Shame</a></td>
-                </tr>
+<h3>Labs</h3>
+<p>A lab is due one week from the day it is assigned.</p>
 
-                <tr>
-                    <td>Thursday, January 23rd</td>
-                    <td><a href="lecture_notes/game_design.html">Game Design Principles</a></td>
-                    <td>&nbsp;</td>
-                </tr>
+<h3>Solutions to Assignments and Examinations</h3>
+<p>Solutions to assignments and examinations will not be posted for this course.</p>
 
-                <tr>
-                    <td>Tuesday, January 28th</td>
-                    <td><a href="lecture_notes/game_dev.html">Game Development Methodologies</a></td>
-                    <td><a href="assignments/a2.html">Assignment 2: Designing the One-Button Game; Due Tuesday, February 4th in class</a></td>
-                </tr>
-
-                <tr>
-                    <td>Thursday, January 30th</td>
-                    <td colspan="2">Guest Lecturers: Timothy Loew (Tufts Class of 1991) and Monty Sharma, Directors, <a href="http://www.massdigi.org/" target="_blank">Massachusetts Digital Games Institute (MassDiGI)</a></td>
-                </tr>
-
-                <tr>
-                    <td>Tuesday, February 4th</td>
-                    <td><a href="lecture_notes/python.html">Python</a></td>
-                    <td>
-                        <ul>
-                            <li><a href="assignments/hof_spring2014.txt">Your Hall of Fame Game Results</a></li>
-                            <li><a href="assignments/shame_spring2014.txt">Your Hall of Shame Results</a></li>
-                        </ul>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Thursday, February 6th</td>
-                    <td><a href="lecture_notes/pygame.html">PyGame</a></td>
-                    <td><a href="assignments/lab-python.html">Lab 2: Python</a></td>
-                </tr>
-
-                <tr>
-                    <td>Tuesday, February 11th</td>
-                    <td><a href="lecture_notes/sprites.html">Sprites and Animation</a></td>
-                    <td><a href="assignments/game2d.html">The Spring 2014 2D Game Group Project</a></td>
-                </tr>
-
-                <tr>
-                    <td>Thursday, February 13th</td>
-                    <td><a href="lecture_notes/physics.html">Physics</a></td>
-                    <td><a href="assignments/lab-pygame1.html">Lab 3: The Battle for Ram Aras, Part I</a></td>
-                </tr>
-
-                <tr>
-                    <td>Tuesday, February 18th</td>
-                    <td>
-                        <ul>
-                            <li>Loose Ends</li>
-                            <li><a href="http://tuftsalumni.org/events-reunions/detail/engineering-career-networking-night/" target="_blank">Tufts Engineering Student-Alumni Networking Event</a></li>
-                        </ul>
-                    </td>
-                    <td>&nbsp;</td>
-                </tr>
-
-                <tr>
-                    <td>Thursday, February 20th</td>
-                    <td>NO CLASS</td>
-                    <td>&nbsp;</td>
-                </tr>
-
-                <tr>
-                    <td>Tuesday, February 25th</td>
-                    <td><a href="lecture_notes/game_optimization-mdurgavich.pdf">Game Optimization for Fun and Profit.</a> Guest Lecturer: <a href="http://www.linkedin.com/in/mattdurgavich" target="_blank">Matt Durgavich (E '03), Subatomic Studios</a></td>
-                    <td>
-                        <ul>
-                            <li><a href="assignments/lab-pygame2.html">Lab 4: The Battle for Ram Aras, Part II</a></li>
-                            <li><a href="assignments/q1_practice.pdf">Practice Quiz 1</a></li>
-                        </ul>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Thursday, February 27th</td>
-                    <td><a href="lecture_notes/MusicSoundandVideoGames.pdf">Audio, Sound, and Music</a></td>
-                    <td>&nbsp;</td>
-                </tr>
-
-                <tr>
-                    <td>Tuesday, March 4th</td>
-                    <td>
-                        <ul>
-                            <li><a href="http://takethecrosstown.com/2010/11/02/leveling-up-your-storytelling-on-the-web/" target="_blank">Storytelling and Interactive Fiction</a></li>
-                            <li><a href="http://www.brasslantern.org/beginners/beginnersguide.html" target="_blank">A Beginner's Guide to Interactive Fiction</a></li>
-                            <li><a href="http://pr-if.org/doc/play-if-card/play-if-card.pdf" target="_blank">IF-for-Beginners Card (PDF)</a> (via People's Republic of Interactive Fiction)</li>
-                        </ul>
-                    </td>
-                    <td><a href="assignments/a3.html">Assignment 3: Interactive Fiction; Due Friday, Pi Day</a></td>
-                </tr>
-
-                <tr>
-                    <td>Thursday, March 6th</td>
-                    <td>&nbsp;</td>
-                    <td>Quiz 1</td>
-                </tr>
-
-                <tr>
-                    <td>Tuesday, March 11th</td>
-                    <td>Game Testing</td>
-                    <td>&nbsp;</td>
-                </tr>
-
-                <tr>
-                    <td>Thursday, March 13th</td>
-                    <td>2D Game Group Project Check-In</td>
-                    <td>&nbsp;</td>
-                </tr>
-
-                <tr>
-                    <td>Tuesday, March 18th</td>
-                    <td>SPRING BREAK</td>
-                    <td>&nbsp;</td>
-                </tr>
-
-                <tr>
-                    <td>Thursday, March 20th</td>
-                    <td>SPRING BREAK</td>
-                    <td>&nbsp;</td>
-                </tr>
-
-                <tr>
-                    <td>Tuesday, March 25th</td>
-                    <td><a href="lecture_notes/ai.html">Artificial Intelligence</a>, Sprite Sheets, Optimization(s) for Raspberry Pi</td>
-                    <td>&nbsp;</td>
-                </tr>
-
-                <tr>
-                    <td>Thursday, March 27th</td>
-                    <td><a href="lecture_notes/testing.html">Game Testing</a></td>
-                    <td>&nbsp;</td>
-                </tr>
-
-                <tr>
-                    <td>Tuesday, April 1st</td>
-                    <td><a href="lecture_notes/ethics_security.html">Ethics, MMORPGs, and Securing Online Games</a></td>
-                    <td>
-                        <ul>
-                            <li><a href="assignments/final_project.html">Final Project</a></li>
-                            <li><a href="assignments/a4.html">Assignment 4: IEEE Security &amp; Privacy Securing Online Games</a></li>
-                        </ul>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Thursday, April 3rd</td>
-                    <td colspan="2">2D Game Testing Day</td>
-                </tr>
-
-                <tr>
-                    <td>Tuesday, April 8th</td>
-                    <td>Mobile Games</td>
-                    <td>&nbsp;</td>
-                </tr>
-
-                <tr>
-                    <td>Thursday, April 10th</td>
-                    <td>Game Engines.  Guest Lecturer: Matt Koulouris (Game Dev Class of 2008, E '10), Rockstar Games</td>
-                    <td>&nbsp;</td>
-                </tr>
-
-                <tr>
-                    <td>Tuesday, April 15th</td>
-                    <td>
-                        <ul>
-                            <li><a href="https://github.com/tuftsdev/ios/tree/spring2013/objective-c">My notes on Objective-C</a></li>
-                            <li><a href="lecture_notes/iosgameengine.pdf">Cocos2D Game Engine Introduction (by Foster Lockwood, E '12')</a></li>
-                        </ul>
-                    </td>
-                    <td><a href="assignments/q2_practice.pdf">Practice Quiz 2</a></td>
-                </tr>
-
-                <tr>
-                    <td>Thursday, April 17th</td>
-                    <td>&nbsp;</td>
-                    <td>Quiz 2</td>
-                </tr>
-
-                <tr>
-                    <td>Tuesday, April 22nd</td>
-                    <td>Advanced Topics: Networking and Porting</td>
-                    <td>&nbsp;</td>
-                </tr>
-
-                <tr>
-                    <td>Thursday, April 24th</td>
-                    <td>Looking Ahead</td>
-                    <td>&nbsp;</td>
-                </tr>
-
-            </table>
-
-            <h2>Assessment (a.k.a., Grading)</h2>
-            <ul>
-                <li>Assignments and labs (30%)</li>
-                <li>2D game group project (25%)</li>
-                <li>2 quizzes (20%)</li>
-                <li>Final project (20%)</li>
-                <li>Subjective factors (including attendance, class participation, and posting to Piazza; 5%)</li>
-            </ul>
-
-            <p>Class participation encompasses a variety of activities, all with the same purpose.  To earn high grades for class participation, you must show that you are actively engaged in managing your own learning, developing new skills, and developing new ways of programming and problem-solving. You can be engaged in a variety of ways:</p>
-            <ul>
-                <li>Writing sane and sensible answers on quizzes</li>
-                <li>Asking appropriate questions in class</li>
-                <li>Answering questions when called on in class</li>
-                <li>Asking appropriate questions on Piazza</li>
-                <li>Answering questions well on Piazza</li>
-                <li>Organizing study groups</li>
-                <li>Interacting professionally with programming partners and course staff</li>
-                <li>Working out ideas with teaching assistants</li>
-                <li>Helping other COMP 20 students in Halligan</li>
-            </ul>
-
-            <p>Nobody has to do all of these things; you can earn top grades for class participation by doing just a few things well. In particular, nobody is required to speak in class, but everybody should be prepared to answer questions if called upon.</p>
-
-            <p>Professional interactions with other students and with course staff are the same as those which are expected in any workplace. It is also professional for you to recognize that a member of the course staff may be present but not actually available to talk about COMP 20.</p>
-
-            <h2 id="policies">Course Policies</h2>
-
-            <h3>Assignment Late Policy</h3>
-            <p>Assignments (labs, homework) that is submitted electronically (most homework) will typically be due at 11:59 PM on a Tuesday or Thursday. We will grant an automatic extension of ten minutes at no cost to you. If you plan on submitting your work at midnight or at six, you will have nine minutes for last-minute changes.</p>
-            <p>An assignment is expected to be submitted on time. However, we recognize that the exigencies of college life occasionally interfere with on-time submission. If you have difficulty getting the assignment in on time, you have two options:</p>
-            <ol>
-                <li>For ordinary difficulties, each student is automatically issued three (3) "extension tokens." By expending an extension token, you can get an automatic 24-hour extension on all deadlines associated with a single assignment.  To use an extension token, you must e-mail me at <code>mchow@cs.tufts.edu</code>. Thus must be sent before the assignment is due.  At most two extension tokens may be expended on any single assignment.  When you are out of tokens, late assignments will no longer be accepted: it will be returned ungraded, and you will receive no credit for the work.</li>
-                <li>If a serious illness affects your ability to complete the assignment on time, your first step is to report the illness using the "Illness Notification Form" that is available in WebCenter for Students. We will make suitable arrangements. For extraordinary difficulties, such as bereavement, family emergencies, or other extraordinary unpleasant events, your first step should be to make contact with your associate dean for undergraduate education. You must take this step before the assignment is due. Ask your dean to drop me an email or give me a call, and we will make special arrangements that are suited to your circumstances.</li>
-            </ol>
-            <p>Please understand that extension tokens are meant to be used.  That is, you will not receive any special bonus at the end of the course if you do not use any of your extension tokens.</p>
-
-            <h3>Labs</h3>
-            <p>A lab is due one week from the day it is assigned.</p>
-
-            <h3>Solutions to Assignments and Examinations</h3>
-            <p>Solutions to assignments and examinations will not be posted for this course.</p>
-
-        </div>
-
-        <script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-        </script>
-        <script type="text/javascript">
-try {
-    var pageTracker = _gat._getTracker("UA-582953-7");
-    pageTracker._trackPageview();
-}
-catch(err) {}
-        </script>
-
-    </body>
+</body>
 </html>
