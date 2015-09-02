@@ -16,6 +16,7 @@ config/database.yml
 # Ignore all logfiles and tempfiles.
 log/*
 tmp/*
+old/*
 
 # OS generated files #
 ######################
