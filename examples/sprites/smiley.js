@@ -5,10 +5,10 @@ Smiley.prototype.dx = 0;
 Smiley.prototype.dy = 0;
 
 function Smiley (game, x, y) {
-	Phaser.Sprite.call(this, game, x, y, 'awesomeface');
+    Phaser.Sprite.call(this, game, x, y, 'awesomeface');
     Smiley.prototype.game = game;
-	this.dx = Math.floor(Math.random() * this.MAX_SPEED);
-	this.dy = Math.floor(Math.random() * this.MAX_SPEED);
+    this.dx = Math.floor(Math.random() * this.MAX_SPEED);
+    this.dy = Math.floor(Math.random() * this.MAX_SPEED);
     this.scale.set(0.025, 0.025);
     this.anchor.setTo(0.5, 0.5); // why is this necessary?
     game.add.existing(this);
